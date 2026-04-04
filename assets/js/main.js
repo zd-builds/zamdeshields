@@ -54,7 +54,7 @@
         'Name: ' + name + '\nEmail: ' + email + '\n\n' + message
       );
       const mailtoLink =
-        'mailto:zam@tutamail.com?subject=' +
+        'mailto:zam@zamdeshields.org?subject=' +
         encodeURIComponent(subject) +
         '&body=' +
         body;
