@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Zam DeShields / ZD LLC</title>
+  <meta name="description" content="Contact Zam DeShields for consulting, speaking, training, or technical assistance engagements. All inquiries receive a response within 3 business days.">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="site-nav" aria-label="Main navigation">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo" aria-label="ZD LLC home">
+          <img src="assets/images/zam-deshields-logo-2.png" alt="Zam DeShields logo">
+        </a>
+        <button class="nav-toggle" aria-controls="nav-links" aria-expanded="false" aria-label="Toggle navigation">
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links" id="nav-links" role="list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="speaking.html">Speaking</a></li>
+          <li><a href="cv.html">CV</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page header -->
+  <header class="page-header" aria-labelledby="page-title">
+    <div class="container">
+      <p class="section-label">Contact</p>
+      <h1 id="page-title">Let's Talk</h1>
+      <p class="lead">Zam is available for consulting engagements, speaking, training, and technical assistance. All inquiries receive a response within 3 business days.</p>
+    </div>
+  </header>
+
+  <!-- Contact content -->
+  <section aria-labelledby="contact-heading">
+    <div class="container">
+      <h2 id="contact-heading" class="sr-only">Contact information and form</h2>
+      <div class="contact-grid">
+
+        <!-- Contact info -->
+        <div class="contact-info">
+          <p class="section-label">Reach out directly</p>
+          <div class="divider" aria-hidden="true" style="margin-bottom:1.5rem;"></div>
+
+          <ul class="contact-details" role="list">
+            <li>
+              <strong>Email</strong>
+              <a href="mailto:zam@tutamail.com">zam@tutamail.com</a>
+            </li>
+            <li>
+              <strong>LinkedIn</strong>
+              <a href="https://www.linkedin.com/in/zam-deshields/" target="_blank" rel="noopener noreferrer">Personal profile</a>
+            </li>
+            <li>
+              <strong>ZD LLC</strong>
+              <a href="https://linkedin.com/company/zam-deshields-llc" target="_blank" rel="noopener noreferrer">Company page</a>
+            </li>
+            <li>
+              <strong>Location</strong>
+              Washington State — available nationally and internationally
+            </li>
+          </ul>
+
+          <p style="font-size:0.85rem; color:var(--text-muted); font-style:italic; margin-top:1.5rem;">A fees schedule is available upon request.</p>
+        </div>
+
+        <!-- Contact form -->
+        <div>
+          <form id="contact-form" class="contact-form" novalidate>
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                autocomplete="name"
+                required
+                aria-required="true"
+                placeholder="Your full name"
+              >
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                autocomplete="email"
+                required
+                aria-required="true"
+                placeholder="your@email.com"
+              >
+            </div>
+
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <select id="subject" name="subject" required aria-required="true">
+                <option value="" disabled selected>Select an inquiry type</option>
+                <option value="Consulting Inquiry">Consulting Inquiry</option>
+                <option value="Speaking Inquiry">Speaking Inquiry</option>
+                <option value="Workshop">Workshop</option>
+                <option value="Training">Training</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea
+                id="message"
+                name="message"
+                required
+                aria-required="true"
+                placeholder="Tell Zam about your organization and what you're looking for..."
+              ></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Send message</button>
+            <p class="form-note">Submitting this form will open your default email client to send the message directly to zam@tutamail.com.</p>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-inner">
+        <span>&copy; 2025 ZD LLC</span>
+        <ul class="footer-links" role="list">
+          <li><a href="mailto:zam@tutamail.com">zam@tutamail.com</a></li>
+          <li><a href="https://www.linkedin.com/in/zam-deshields/" target="_blank" rel="noopener noreferrer">LinkedIn (personal)</a></li>
+          <li><a href="https://linkedin.com/company/zam-deshields-llc" target="_blank" rel="noopener noreferrer">LinkedIn (ZD LLC)</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
