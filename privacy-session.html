@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Connect — Zam DeShields</title>
+<title>Data Privacy Check-In — Zam DeShields</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -34,7 +34,6 @@
   }
 
   img { max-width: 100%; height: auto; display: block; }
-
   a { color: var(--green-deep); text-decoration: underline; text-underline-offset: 3px; }
   a:hover { color: var(--text-muted); }
 
@@ -119,16 +118,6 @@
     color: var(--green-deep);
   }
 
-  .btn-outline-dark {
-    background: transparent;
-    color: var(--green-deep);
-    border-color: var(--green-deep);
-  }
-  .btn-outline-dark:hover {
-    background: var(--green-deep);
-    color: var(--text-light);
-  }
-
   /* Nav */
   .site-nav {
     position: sticky;
@@ -197,48 +186,77 @@
     background: var(--text-light);
   }
 
-  /* Page header */
+  /* Page header / hero */
   .page-header {
     background: var(--green-deep);
     color: var(--text-light);
-    padding-block: 4rem 3.5rem;
+    padding-block: 5rem 4rem;
   }
 
   .page-header h1 {
     color: var(--text-light);
     font-weight: 300;
+    margin-bottom: 1.25rem;
   }
 
   .page-header .lead {
     color: var(--green-sage);
-    margin-top: 1rem;
-    max-width: 680px;
+    max-width: 640px;
+    margin-bottom: 2rem;
   }
 
-  /* Reasons section */
-  .reasons-section {
-    background: var(--green-light);
-    border-top: 1px solid var(--border);
-    border-bottom: 1px solid var(--border);
-    padding-block: 4rem;
+  .price-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: rgba(184,206,181,0.15);
+    border: 1px solid rgba(184,206,181,0.3);
+    padding: 0.5rem 1.1rem;
+    font-size: 0.9rem;
+    color: var(--green-sage);
+    margin-bottom: 1rem;
+    font-family: 'Source Sans 3', sans-serif;
   }
 
-  .reasons-list {
+  .price-badge strong {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--text-light);
+  }
+
+  .sliding-note {
+    font-size: 0.85rem;
+    color: rgba(184,206,181,0.7);
+    margin-bottom: 2rem;
+  }
+
+  .sliding-note a {
+    color: var(--green-sage);
+  }
+
+  /* What you walk away with */
+  .outcomes-section {
+    padding-block: 5rem;
+  }
+
+  .outcomes-list {
     list-style: none;
     margin-top: 1.5rem;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0.75rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
   }
 
-  .reasons-list li {
+  .outcomes-list li {
     font-size: 0.95rem;
     color: var(--text-dark);
     padding-left: 1.25rem;
     position: relative;
+    line-height: 1.6;
   }
 
-  .reasons-list li::before {
+  .outcomes-list li::before {
     content: '';
     position: absolute;
     left: 0;
@@ -248,51 +266,91 @@
     background: var(--green-sage);
   }
 
-  /* Privacy CTA strip */
-  .privacy-strip {
-    background: var(--green-deep);
-    color: var(--text-light);
-    padding-block: 3rem;
+  /* Who it's for */
+  .for-section {
+    background: var(--green-light);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    padding-block: 4rem;
   }
 
-  .privacy-strip-inner {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 2rem;
-    flex-wrap: wrap;
-  }
-
-  .privacy-strip h2 {
-    color: var(--text-light);
-    font-weight: 300;
-    margin-bottom: 0.5rem;
-  }
-
-  .privacy-strip p {
-    color: var(--green-sage);
-    font-size: 1rem;
-    max-width: 540px;
-  }
-
-  /* Book section */
-  .book-section {
+  /* How it works */
+  .steps-section {
     padding-block: 5rem;
   }
 
-  .book-header {
-    margin-bottom: 2.5rem;
+  .steps {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .step {
+    display: grid;
+    grid-template-columns: 3rem 1fr;
+    gap: 1.5rem;
+    padding-block: 2rem;
+    border-bottom: 1px solid var(--border);
+    align-items: start;
+  }
+
+  .step:first-child { padding-top: 0; border-top: 1px solid var(--border); }
+
+  .step-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem;
+    font-weight: 300;
+    color: var(--green-sage);
+    line-height: 1.1;
+    margin-top: -0.1em;
+  }
+
+  .step-text h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.35rem;
+    color: var(--green-deep);
+  }
+
+  .step-text p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    margin: 0;
+  }
+
+  /* About */
+  .about-section {
+    background: var(--green-light);
+    border-top: 1px solid var(--border);
+    padding-block: 5rem;
+  }
+
+  .about-grid {
+    display: grid;
+    grid-template-columns: 3px 1fr;
+    gap: 2rem;
+    align-items: start;
+    margin-top: 1.5rem;
+  }
+
+  .about-bar { background: var(--green-sage); }
+
+  .about-text p {
+    font-size: 1rem;
+    color: var(--text-muted);
+    line-height: 1.75;
+  }
+
+  .about-text p + p { margin-top: 0.75rem; }
+
+  /* Book */
+  .book-section {
+    padding-block: 5rem;
   }
 
   .cal-wrap {
     border: 1px solid var(--border);
     background: var(--green-light);
-  }
-
-  .email-alt {
-    margin-top: 1.25rem;
-    font-size: 0.875rem;
-    color: var(--text-muted);
+    margin-top: 2rem;
   }
 
   /* Footer */
@@ -325,13 +383,9 @@
   }
   .footer-links a:hover { color: var(--text-light); text-decoration: underline; }
 
-  @media (max-width: 900px) {
-    .privacy-strip-inner { flex-direction: column; align-items: flex-start; }
-    .reasons-list { grid-template-columns: 1fr; }
-  }
-
   @media (max-width: 700px) {
     section { padding-block: 3.5rem; }
+    .page-header { padding-block: 3.5rem 3rem; }
     .nav-links { display: none; flex-direction: column; position: absolute; top: 4.5rem; left: 0; right: 0; background: var(--green-deep); padding: 1rem 1.5rem 1.5rem; gap: 0; border-top: 1px solid rgba(184,206,181,0.2); }
     .nav-links.open { display: flex; }
     .nav-links a { padding: 0.75rem 0; border-bottom: 1px solid rgba(184,206,181,0.1); font-size: 1rem; }
@@ -339,6 +393,7 @@
     .nav-toggle { display: flex; }
     .site-nav { position: relative; }
     .footer-inner { flex-direction: column; }
+    .step { grid-template-columns: 2.25rem 1fr; gap: 1rem; }
   }
 </style>
 </head>
@@ -355,7 +410,7 @@
         <li><a href="https://zamdeshields.org/about.html">About</a></li>
         <li><a href="https://zamdeshields.org/services.html">Services</a></li>
         <li><a href="https://zamdeshields.org/resources.html">Resources</a></li>
-        <li><a href="https://zamdeshields.org/contact.html" class="active">Contact</a></li>
+        <li><a href="https://zamdeshields.org/contact.html">Contact</a></li>
       </ul>
     </div>
   </div>
@@ -363,54 +418,100 @@
 
 <div class="page-header">
   <div class="container">
-    <p class="section-label" style="color: var(--green-sage);">Get in touch</p>
-    <h1>Let's figure out<br>if we're a good fit.</h1>
-    <p class="lead">A free 15-minute call to introduce yourself, ask a question, or explore whether working together makes sense. No pitch, no obligation.</p>
-    <div style="display:flex; gap:1rem; flex-wrap:wrap; margin-top:2rem;">
-      <a href="#book" class="btn btn-primary">Book a free call →</a>
-      <a href="mailto:zam@zamdeshields.org" class="btn btn-outline">Email instead</a>
+    <p class="section-label" style="color: var(--green-sage);">Data Privacy Check-In</p>
+    <h1>Figure out where to start<br>on data privacy.</h1>
+    <p class="lead">Your data is being collected. Your behavior is being tracked. But it's not too late — you still have choices, and they matter more than you think.</p>
+    <div class="price-badge">
+      <strong>$175</strong>
+      <span>·</span>
+      <span>50 minutes</span>
+      <span>·</span>
+      <span>One-on-one</span>
     </div>
+    <p class="sliding-note">Sliding scale available. <a href="mailto:zam@zamdeshields.org">Email to arrange</a> before booking.</p>
+    <a href="#book" class="btn btn-primary">Book your session →</a>
   </div>
 </div>
 
-<div class="reasons-section">
+<section class="outcomes-section">
   <div class="container">
-    <p class="section-label">Good reasons to reach out</p>
-    <h2>What this call is for</h2>
+    <p class="section-label">What you walk away with</p>
+    <h2>Clear answers, concrete next steps.</h2>
     <div class="divider"></div>
-    <ul class="reasons-list">
-      <li>You're curious about the Data Privacy Check-In and want to ask a question first</li>
-      <li>You're exploring consulting, speaking, or training and want to scope something out</li>
-      <li>You're an organization working on AI governance or Indigenous data issues</li>
-      <li>You're not sure if there's a fit — and want to find out without committing</li>
+    <ul class="outcomes-list">
+      <li>A plain-language read on where your biggest privacy risks actually are</li>
+      <li>Three to five concrete actions, prioritized — not a generic checklist</li>
+      <li>Answers to questions you didn't know where to start asking</li>
+      <li>Designed for everyday people — not developers, security experts, or anyone with a computer science degree</li>
     </ul>
   </div>
+</section>
+
+<div class="for-section">
+  <div class="container">
+    <p class="section-label">Who this is for</p>
+    <h2>For everyone else.</h2>
+    <div class="divider"></div>
+    <p class="lead" style="margin-top:1.5rem;">People who use ChatGPT, Google, apps on their phone, smart speakers, period trackers, fitness devices — and want to understand what that actually costs them.</p>
+    <p style="font-size:0.95rem; color:var(--text-muted); margin-top:1rem;">If you've ever felt like your phone is listening, noticed ads that know too much, or wondered what companies actually have on you — this is for you. Not for developers or security experts. For everyone else.</p>
+  </div>
 </div>
 
-<div class="privacy-strip">
+<section class="steps-section">
   <div class="container">
-    <div class="privacy-strip-inner">
-      <div>
-        <h2>Looking for the Data Privacy Check-In?</h2>
-        <p>A focused 50-minute session to map your data privacy risks and leave with a prioritized action list — no jargon.</p>
+    <p class="section-label">How it works</p>
+    <h2>Three steps.</h2>
+    <div class="divider"></div>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">01</div>
+        <div class="step-text">
+          <h3>Book and pay</h3>
+          <p>Pick a time that works. Payment is collected at booking — $175, no surprises. Sliding scale available; email first to arrange.</p>
+        </div>
       </div>
-      <a href="/privacy-session" class="btn btn-outline" style="white-space:nowrap;">See the Privacy Check-In →</a>
+      <div class="step">
+        <div class="step-num">02</div>
+        <div class="step-text">
+          <h3>We talk for 50 minutes</h3>
+          <p>We go through your actual habits and tools. What you use, how you use it, what you might not have considered.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">03</div>
+        <div class="step-text">
+          <h3>You leave with a clear picture</h3>
+          <p>Where your biggest exposures are and what to do about them — in an order that makes sense for your life.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="about-section">
+  <div class="container">
+    <p class="section-label">About Zam</p>
+    <h2>Who you're talking to.</h2>
+    <div class="divider"></div>
+    <div class="about-grid">
+      <div class="about-bar"></div>
+      <div class="about-text">
+        <p>Zam DeShields is a Chickasaw Nation member, AI ethics consultant, and digital safety educator with a background in Indigenous data sovereignty. Previously supported Microsoft's Indigenous Program Office, where they worked on AI equity, data governance, and digital inclusion across four countries.</p>
+        <p>Zam is currently completing a graduate degree in Rehabilitation Counseling at Western Washington University and runs a consulting practice focused on AI ethics and privacy education.</p>
+      </div>
     </div>
   </div>
 </div>
 
 <section class="book-section" id="book">
   <div class="container">
-    <div class="book-header">
-      <p class="section-label">Free · 15 minutes</p>
-      <h2>Pick a time</h2>
-      <div class="divider"></div>
-      <p class="lead" style="margin-top:1rem;">No agenda required. Come as you are.</p>
-    </div>
+    <p class="section-label">Limited slots available</p>
+    <h2>Ready to get a clear picture?</h2>
+    <div class="divider"></div>
+    <p class="lead" style="margin-top:1rem;">$175 · 50 minutes · Book directly below</p>
     <div class="cal-wrap">
-      <div id="cal-connect" style="width:100%;height:600px;overflow:scroll"></div>
+      <div id="cal-privacy-check-in" style="width:100%;height:600px;overflow:scroll"></div>
     </div>
-    <p class="email-alt">Prefer email? <a href="mailto:zam@zamdeshields.org">zam@zamdeshields.org</a></p>
   </div>
 </section>
 
@@ -440,13 +541,13 @@
     };
   })(window, "https://app.cal.com/embed/embed.js", "init");
 
-  Cal("init", "connect", { origin: "https://cal.com" });
-  Cal.ns["connect"]("inline", {
-    elementOrSelector: "#cal-connect",
-    calLink: "zam-deshields/connect",
+  Cal("init", "privacy-check-in", { origin: "https://cal.com" });
+  Cal.ns["privacy-check-in"]("inline", {
+    elementOrSelector: "#cal-privacy-check-in",
+    calLink: "zam-deshields/privacy-check-in",
     layout: "month_view"
   });
-  Cal.ns["connect"]("ui", {
+  Cal.ns["privacy-check-in"]("ui", {
     styles: { branding: { brandColor: "#2A3828" } },
     hideEventTypeDetails: false,
     layout: "month_view"
