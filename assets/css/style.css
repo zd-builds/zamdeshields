@@ -971,10 +971,8 @@ button {
 .about-headshot {
   flex-shrink: 0;
   width: 340px;
-  min-height: 280px;
   border-radius: 4px;
   overflow: hidden;
-  background: rgba(184, 206, 181, 0.12);
 }
 
 .about-headshot img {
@@ -1000,7 +998,7 @@ button {
 }
 
 @media (max-width: 900px) {
-  .about-headshot { width: 260px; min-height: 220px; }
+  .about-headshot { width: 260px; }
 }
 
 @media (max-width: 700px) {
@@ -1013,7 +1011,6 @@ button {
   .about-headshot {
     width: 100%;
     max-width: 280px;
-    min-height: 240px;
   }
 }
 
