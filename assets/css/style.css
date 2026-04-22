@@ -273,7 +273,6 @@ section { padding-block: 5rem; }
   background: var(--green-deep);
   color: var(--text-light);
   padding-block: 7rem 6rem;
-  text-align: center;
 }
 
 .hero-logo {
@@ -781,6 +780,7 @@ section { padding-block: 5rem; }
   .topics-list { grid-template-columns: 1fr; }
   .cv-entry { grid-template-columns: 1fr; gap: 0.5rem; }
   .timeline-item { grid-template-columns: 1fr; gap: 0.5rem; }
+  .door-grid { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 700px) {
@@ -794,9 +794,136 @@ section { padding-block: 5rem; }
   .site-nav { position: relative; }
   .footer-inner { flex-direction: column; }
   .contact-form { padding: 1.5rem; }
+  .hero-content {
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+    gap: 1.5rem;
+  }
+  .headshot-img { width: 140px; height: 140px; }
+  .footer-cta { padding-block: 3.5rem; }
 }
 
 @media (max-width: 500px) {
   .about-grid { text-align: center; }
   .headshot-placeholder { margin-inline: auto; }
+}
+
+/* --------------------------------------------------------------------------
+   Hero — two-column content layout (home)
+   -------------------------------------------------------------------------- */
+.hero-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 3rem;
+  margin-top: 1rem;
+}
+
+.hero-text { flex: 1; min-width: 0; }
+
+.hero-lead {
+  font-size: clamp(1.1rem, 2.2vw, 1.35rem);
+  color: var(--green-sage);
+  font-family: 'Source Sans 3', sans-serif;
+  font-weight: 300;
+  line-height: 1.65;
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.hero-secondary {
+  font-size: 0.95rem;
+  color: rgba(232, 237, 230, 0.72);
+  font-family: 'Source Sans 3', sans-serif;
+  font-weight: 300;
+  line-height: 1.75;
+  margin: 0;
+}
+
+.hero-headshot { flex-shrink: 0; }
+
+.headshot-img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--green-sage);
+  display: block;
+  background: var(--green-deep);
+}
+
+/* --------------------------------------------------------------------------
+   Two-door section (home)
+   -------------------------------------------------------------------------- */
+.two-door { padding-block: 5rem; }
+
+.two-door > .container > h2 {
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+
+.door-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--gap);
+}
+
+.door-card {
+  padding: 2.5rem 2rem;
+  background: var(--green-light);
+  border-top: 3px solid var(--green-sage);
+  display: flex;
+  flex-direction: column;
+}
+
+.door-card h3 { margin-bottom: 0.75rem; }
+
+.door-card p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  flex: 1;
+  margin-bottom: 1.5rem;
+}
+
+/* --------------------------------------------------------------------------
+   Credentialing strip (home)
+   -------------------------------------------------------------------------- */
+.credentialing-strip {
+  background: var(--green-light);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding-block: 2.5rem;
+}
+
+.credentialing-strip p {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  text-align: center;
+  max-width: 760px;
+  margin-inline: auto;
+  margin-bottom: 0.65rem;
+}
+
+.credentialing-strip p:last-child { margin-bottom: 0; }
+
+/* --------------------------------------------------------------------------
+   Footer CTA (home)
+   -------------------------------------------------------------------------- */
+.footer-cta {
+  background: var(--green-deep);
+  color: var(--text-light);
+  text-align: center;
+  padding-block: 5rem;
+}
+
+.footer-cta h2 {
+  color: var(--text-light);
+  margin-bottom: 2rem;
+}
+
+.footer-cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
