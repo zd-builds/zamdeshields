@@ -6,7 +6,6 @@
 /* --------------------------------------------------------------------------
    Fonts
    -------------------------------------------------------------------------- */
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Source+Sans+3:wght@300;400;500;600&display=swap');
 
 /* --------------------------------------------------------------------------
    Custom properties
@@ -28,14 +27,15 @@
    -------------------------------------------------------------------------- */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-html { font-size: 16px; scroll-behavior: smooth; }
+html { font-size: 15px; scroll-behavior: smooth; }
 
 body {
-  font-family: 'Source Sans 3', sans-serif;
+  font-family: 'DM Mono', 'IBM Plex Mono', 'Courier New', monospace;
   font-weight: 400;
   color: var(--text-dark);
   background: #fff;
-  line-height: 1.7;
+  line-height: 1.6;
+  font-variant-numeric: oldstyle-nums proportional-nums;
 }
 
 img { max-width: 100%; height: auto; display: block; }
@@ -50,8 +50,9 @@ a:hover { color: var(--text-muted); }
 /* --------------------------------------------------------------------------
    Typography
    -------------------------------------------------------------------------- */
-h1, h2, h3, h4 {
-  font-family: 'Cormorant Garamond', serif;
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Fraunces', Georgia, 'Times New Roman', serif;
+  font-variation-settings: 'SOFT' 100, 'WONK' 1, 'opsz' 72;
   font-weight: 500;
   line-height: 1.2;
   color: var(--green-deep);
@@ -85,7 +86,7 @@ p:last-child { margin-bottom: 0; }
 section { padding-block: 5rem; }
 
 .section-label {
-  font-family: 'Source Sans 3', sans-serif;
+  font-family: 'DM Mono', 'IBM Plex Mono', 'Courier New', monospace;
   font-size: 0.75rem;
   font-weight: 600;
   letter-spacing: 0.12em;
@@ -111,7 +112,7 @@ section { padding-block: 5rem; }
 .btn {
   display: inline-block;
   padding: 0.75rem 2rem;
-  font-family: 'Source Sans 3', sans-serif;
+  font-family: 'DM Mono', 'IBM Plex Mono', 'Courier New', monospace;
   font-size: 0.9rem;
   font-weight: 600;
   letter-spacing: 0.05em;
@@ -182,7 +183,7 @@ section { padding-block: 5rem; }
 }
 
 .nav-logo-text {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Fraunces', Georgia, 'Times New Roman', serif;
   font-size: 1.3rem;
   font-weight: 500;
   color: var(--text-light);
@@ -199,7 +200,7 @@ section { padding-block: 5rem; }
 }
 
 .nav-links a {
-  font-family: 'Source Sans 3', sans-serif;
+  font-family: 'DM Mono', 'IBM Plex Mono', 'Courier New', monospace;
   font-size: 0.85rem;
   font-weight: 500;
   letter-spacing: 0.04em;
@@ -292,7 +293,7 @@ section { padding-block: 5rem; }
 .hero-tagline {
   font-size: clamp(1rem, 2.2vw, 1.35rem);
   color: var(--green-sage);
-  font-family: 'Source Sans 3', sans-serif;
+  font-family: 'DM Mono', 'IBM Plex Mono', 'Courier New', monospace;
   font-weight: 300;
   letter-spacing: 0.04em;
   margin-bottom: 2.5rem;
@@ -386,7 +387,7 @@ section { padding-block: 5rem; }
 }
 
 .headshot-placeholder span {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Fraunces', Georgia, 'Times New Roman', serif;
   font-size: 3.5rem;
   font-weight: 300;
   color: var(--green-deep);
@@ -467,7 +468,7 @@ section { padding-block: 5rem; }
 }
 
 .timeline-date {
-  font-family: 'Source Sans 3', sans-serif;
+  font-family: 'DM Mono', 'IBM Plex Mono', 'Courier New', monospace;
   font-size: 0.8rem;
   font-weight: 600;
   letter-spacing: 0.06em;
@@ -673,7 +674,7 @@ section { padding-block: 5rem; }
 .form-group textarea {
   width: 100%;
   padding: 0.65rem 0.9rem;
-  font-family: 'Source Sans 3', sans-serif;
+  font-family: 'DM Mono', 'IBM Plex Mono', 'Courier New', monospace;
   font-size: 0.95rem;
   color: var(--text-dark);
   background: #fff;
@@ -824,7 +825,7 @@ section { padding-block: 5rem; }
 .hero-lead {
   font-size: clamp(1.1rem, 2.2vw, 1.35rem);
   color: var(--green-sage);
-  font-family: 'Source Sans 3', sans-serif;
+  font-family: 'DM Mono', 'IBM Plex Mono', 'Courier New', monospace;
   font-weight: 300;
   line-height: 1.65;
   margin-top: 1.25rem;
@@ -834,7 +835,7 @@ section { padding-block: 5rem; }
 .hero-secondary {
   font-size: 0.95rem;
   color: rgba(232, 237, 230, 0.72);
-  font-family: 'Source Sans 3', sans-serif;
+  font-family: 'DM Mono', 'IBM Plex Mono', 'Courier New', monospace;
   font-weight: 300;
   line-height: 1.75;
   margin: 0;
@@ -926,4 +927,13 @@ section { padding-block: 5rem; }
   justify-content: center;
   gap: 1rem;
   flex-wrap: wrap;
+}
+
+/* --------------------------------------------------------------------------
+   Numeric figure style utilities
+   -------------------------------------------------------------------------- */
+.lining-figures,
+.price,
+button {
+  font-variant-numeric: lining-nums tabular-nums;
 }
