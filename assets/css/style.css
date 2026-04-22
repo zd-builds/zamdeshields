@@ -954,6 +954,70 @@ button {
 }
 
 /* --------------------------------------------------------------------------
+   About page
+   -------------------------------------------------------------------------- */
+.about-hero-layout {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  margin-top: 1.5rem;
+}
+
+.about-hero-layout h1 {
+  flex: 1;
+  min-width: 0;
+}
+
+.about-headshot {
+  flex-shrink: 0;
+  width: 340px;
+  min-height: 280px;
+  border-radius: 4px;
+  overflow: hidden;
+  background: rgba(184, 206, 181, 0.12);
+}
+
+.about-headshot img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 4px;
+}
+
+.about-prose p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--text-dark);
+  max-width: 700px;
+}
+
+/* Green-light alternating section — used on about and reusable elsewhere */
+.section-alt {
+  background: var(--green-light);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding-block: 5rem;
+}
+
+@media (max-width: 900px) {
+  .about-headshot { width: 260px; min-height: 220px; }
+}
+
+@media (max-width: 700px) {
+  .about-hero-layout {
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 1.5rem;
+    text-align: center;
+  }
+  .about-headshot {
+    width: 100%;
+    max-width: 280px;
+    min-height: 240px;
+  }
+}
+
+/* --------------------------------------------------------------------------
    Individuals page
    -------------------------------------------------------------------------- */
 .ind-paid {
