@@ -937,3 +937,102 @@ section { padding-block: 5rem; }
 button {
   font-variant-numeric: lining-nums tabular-nums;
 }
+
+/* --------------------------------------------------------------------------
+   Accessibility utilities
+   -------------------------------------------------------------------------- */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* --------------------------------------------------------------------------
+   Individuals page
+   -------------------------------------------------------------------------- */
+.ind-paid {
+  background: var(--green-light);
+  border-top: 3px solid var(--green-sage);
+  padding-block: 5rem;
+}
+
+.ind-paid p {
+  color: var(--text-muted);
+  max-width: 640px;
+}
+
+.ind-price {
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: var(--green-deep);
+  margin-top: 1.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.ind-about {
+  padding-block: 5rem;
+  border-top: 1px solid var(--border);
+}
+
+.ind-about-inner {
+  display: grid;
+  grid-template-columns: 3px 1fr;
+  gap: 2rem;
+  align-items: start;
+  margin-top: 1.75rem;
+}
+
+.ind-about-bar { background: var(--green-sage); }
+
+.ind-faq {
+  background: var(--green-light);
+  border-top: 1px solid var(--border);
+  padding-block: 5rem;
+}
+
+.faq-list {
+  margin-top: 2.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.faq-item {
+  padding-block: 2rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.faq-item:first-child {
+  border-top: 1px solid var(--border);
+}
+
+.faq-item h3 {
+  font-size: clamp(1.1rem, 2vw, 1.3rem);
+  margin-bottom: 0.65rem;
+}
+
+.faq-item p {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  max-width: 680px;
+  margin: 0;
+}
+
+.ind-signup-form {
+  max-width: 480px;
+  margin-top: 2rem;
+}
+
+.ind-reassurance {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-top: 1rem;
+  max-width: 480px;
+  line-height: 1.65;
+  margin-bottom: 0;
+}

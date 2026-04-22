@@ -4,10 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>For Individuals — Zam DeShields</title>
-  <meta name="description" content="Free guides and one-on-one sessions to help you understand your real privacy risks.">
+  <meta name="description" content="Free guides and one-on-one privacy sessions for everyday people — no jargon, no CS degree required.">
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -32,13 +33,125 @@
     </div>
   </nav>
 
-  <main>
-    <div class="not-found">
-      <h2>Coming soon</h2>
-      <p>This page is under construction. In the meantime, reach out directly:</p>
-      <a href="mailto:zam@zamdeshields.org" class="btn btn-primary">zam@zamdeshields.org</a>
+  <!-- Hero -->
+  <header class="page-header" aria-labelledby="page-title">
+    <div class="container">
+      <p class="section-label" style="color: var(--green-sage);">For individuals</p>
+      <h1 id="page-title">Your phone is listening. Your apps know too much. You don't need a computer science degree to do something about it.</h1>
+      <p class="lead">You already know your data is going somewhere. Most people do. The real question is what to actually do about it — without reading forty hours of security blogs or pretending you're going to switch to Linux this weekend.</p>
     </div>
-  </main>
+  </header>
+
+  <!-- Free resource + email signup -->
+  <section id="signup" aria-labelledby="free-guide-heading">
+    <div class="container">
+      <p class="section-label">Start here — free</p>
+      <h2 id="free-guide-heading">The five questions worth asking about any app</h2>
+      <div class="divider" aria-hidden="true"></div>
+
+      <p style="margin-top: 1.5rem; max-width: 640px;">A short guide covering the five questions I ask before I install anything on my phone, sign up for anything online, or agree to anything a smart device wants me to agree to.</p>
+      <p style="max-width: 640px;">No jargon. No fear-mongering. No "just use a VPN" energy.</p>
+
+      <!-- TODO: replace action="#" with Buttondown or Listmonk endpoint before deploying -->
+      <form class="ind-signup-form" action="#" method="post" novalidate>
+        <div class="form-group">
+          <label for="signup-email">Your email</label>
+          <input
+            type="email"
+            id="signup-email"
+            name="email"
+            required
+            autocomplete="email"
+            placeholder="you@example.com"
+            aria-required="true"
+          >
+        </div>
+        <button type="submit" class="btn btn-primary">Send me the guide</button>
+      </form>
+
+      <p class="ind-reassurance">The guide is in progress. Sign up now and I'll send it the day it's ready — usually one email a month after that, and you can unsubscribe any time. I don't sell lists. I don't use tracking pixels. I wrote my own signup because I didn't want to hand your email to a vendor that would.</p>
+    </div>
+  </section>
+
+  <!-- Paid option — visually distinct surface -->
+  <section class="ind-paid" aria-labelledby="checkin-heading">
+    <div class="container">
+      <p class="section-label">When you want more than a guide</p>
+      <h2 id="checkin-heading">Data Privacy Check-In</h2>
+      <div class="divider" aria-hidden="true"></div>
+
+      <p style="margin-top: 1.5rem;">A focused one-on-one session to figure out where your actual privacy risks are — not the generic ones, the ones specific to how you use your phone, your accounts, and the tools you already depend on.</p>
+      <p>You walk away with three to five concrete things to do, in an order that makes sense for your life, plus a written summary you can come back to.</p>
+
+      <p class="ind-price lining-figures">$175 · 50 minutes</p>
+      <p class="ind-reassurance">Pay what you can — sliding scale starts at <span class="lining-figures">$40</span>, no questions asked. <a href="mailto:zam@zamdeshields.org">Email zam@zamdeshields.org</a> before booking.</p>
+      <a href="privacy-session.html" class="btn btn-outline-dark lining-figures">Book a session →</a>
+    </div>
+  </section>
+
+  <!-- Short about -->
+  <section class="ind-about" aria-labelledby="about-eyebrow">
+    <div class="container">
+      <p class="section-label" id="about-eyebrow">Who you're talking to</p>
+      <div class="divider" aria-hidden="true"></div>
+      <div class="ind-about-inner">
+        <div class="ind-about-bar" aria-hidden="true"></div>
+        <div class="about-bio">
+          <p>I'm Zam DeShields. I'm a Chickasaw Nation citizen, a former tribal planning director, and the founder of Microsoft's Indigenous Program Office. I approach privacy from a data sovereignty and harm-reduction lens — shaped by tribal governance, disability justice, and the reality that for trans people, Indigenous communities, and people with disabilities, privacy is often survival.</p>
+          <p>I'm currently a graduate student in Rehabilitation Counseling at Western Washington University, and I run an independent consulting practice focused on AI ethics and data privacy.</p>
+          <a href="about.html">Read more about Zam →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="ind-faq" aria-labelledby="faq-heading">
+    <div class="container">
+      <p class="section-label">Common questions</p>
+      <h2 id="faq-heading" class="sr-only">Frequently asked questions</h2>
+
+      <div class="faq-list">
+
+        <div class="faq-item">
+          <h3>Do I need to be technical?</h3>
+          <p>No. This is specifically designed for people who aren't. If you can describe the apps you use and how you use them, that's enough.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>What if I can't afford $175?</h3>
+          <p>Sliding scale starts at <span class="lining-figures">$40</span>, no questions asked. Email me at <a href="mailto:zam@zamdeshields.org">zam@zamdeshields.org</a> before booking and we'll figure it out. I'd rather have you in the room at a lower rate than not at all.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>What will I actually walk away with?</h3>
+          <p>A plain-language read on where your biggest risks are, three to five concrete things to do, and a written one-page summary emailed within 48 hours of our session.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>Is this for businesses or individuals?</h3>
+          <p>Individuals. If you run an organization and want training for your team, that's a different kind of engagement — take a look at my <a href="services.html">organizational services</a> or <a href="contact.html">get in touch directly</a>.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>Can I give this as a gift?</h3>
+          <p>Yes. Email me and I'll send you a gift link you can forward. Some of my favorite sessions have been birthday or holiday gifts to family members who'd been meaning to "get around to" their digital privacy for years.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer CTA -->
+  <div class="footer-cta">
+    <div class="container">
+      <h2>Ready to start?</h2>
+      <div class="footer-cta-buttons">
+        <a href="#signup" class="btn btn-outline lining-figures">Get the free guide</a>
+        <a href="privacy-session.html" class="btn btn-outline lining-figures">Book a session →</a>
+      </div>
+    </div>
+  </div>
 
   <!-- Footer -->
   <footer class="site-footer" role="contentinfo">
