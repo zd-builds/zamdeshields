@@ -51,8 +51,8 @@ a:hover { color: var(--text-muted); }
    Typography
    -------------------------------------------------------------------------- */
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Fraunces', Georgia, 'Times New Roman', serif;
-  font-variation-settings: 'SOFT' 100, 'WONK' 1, 'opsz' 72;
+  font-family: 'Source Serif 4', 'Source Serif Pro', Georgia, 'Times New Roman', serif;
+  font-variation-settings: 'opsz' 32;
   font-weight: 500;
   line-height: 1.2;
   color: var(--green-deep);
@@ -1017,17 +1017,6 @@ button {
 /* --------------------------------------------------------------------------
    Individuals page
    -------------------------------------------------------------------------- */
-.ind-paid {
-  background: var(--green-light);
-  border-top: 3px solid var(--green-sage);
-  padding-block: 5rem;
-}
-
-.ind-paid p {
-  color: var(--text-muted);
-  max-width: 640px;
-}
-
 .ind-price {
   font-size: 1.05rem;
   font-weight: 500;
@@ -1052,36 +1041,8 @@ button {
 .ind-about-bar { background: var(--green-sage); }
 
 .ind-faq {
-  background: var(--green-light);
   border-top: 1px solid var(--border);
   padding-block: 5rem;
-}
-
-.faq-list {
-  margin-top: 2.5rem;
-  display: flex;
-  flex-direction: column;
-}
-
-.faq-item {
-  padding-block: 2rem;
-  border-bottom: 1px solid var(--border);
-}
-
-.faq-item:first-child {
-  border-top: 1px solid var(--border);
-}
-
-.faq-item h3 {
-  font-size: clamp(1.1rem, 2vw, 1.3rem);
-  margin-bottom: 0.65rem;
-}
-
-.faq-item p {
-  font-size: 0.95rem;
-  color: var(--text-muted);
-  max-width: 680px;
-  margin: 0;
 }
 
 .ind-signup-form {
