@@ -475,6 +475,7 @@ section { padding-block: 5rem; }
   text-transform: uppercase;
   color: var(--text-muted);
   padding-top: 0.2rem;
+  font-variant-numeric: lining-nums tabular-nums;
 }
 
 .timeline-content h3 {
@@ -486,6 +487,19 @@ section { padding-block: 5rem; }
   font-size: 0.9rem;
   color: var(--text-muted);
   margin: 0;
+}
+
+.timeline-content .co-presenter {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  font-style: italic;
+  margin: 0.2rem 0 0;
+}
+
+.recording-link {
+  display: inline-block;
+  font-size: 0.85rem;
+  margin-top: 0.65rem;
 }
 
 .timeline-content .forthcoming {
