@@ -906,6 +906,7 @@ section { padding-block: 5rem; }
 }
 
 .credentialing-strip p:last-child { margin-bottom: 0; }
+.credentialing-strip a { color: inherit; }
 
 /* --------------------------------------------------------------------------
    Footer CTA (home)
@@ -988,6 +989,7 @@ button {
   color: var(--text-dark);
   max-width: 700px;
 }
+.about-prose a { color: inherit; }
 
 /* Green-light alternating section — used on about and reusable elsewhere */
 .section-alt {
