@@ -148,15 +148,16 @@
     gap: 1rem;
   }
 
-  .nav-logo-text {
-    font-family: 'Fraunces', Georgia, 'Times New Roman', serif;
-    font-size: 1.3rem;
-    font-weight: 500;
-    color: var(--text-light);
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
     text-decoration: none;
-    letter-spacing: 0.02em;
   }
-  .nav-logo-text:hover { color: var(--green-sage); }
+  .nav-logo img {
+    height: 2.6rem;
+    width: auto;
+  }
 
   .nav-links {
     display: flex;
@@ -346,18 +347,21 @@
 </head>
 <body>
 
-<nav class="site-nav">
+<nav class="site-nav" aria-label="Main navigation">
   <div class="container">
     <div class="nav-inner">
-      <a href="https://zamdeshields.org" class="nav-logo-text">Zam DeShields</a>
-      <button class="nav-toggle" aria-label="Toggle navigation" onclick="this.nextElementSibling.classList.toggle('open')">
+      <a href="index.html" class="nav-logo" aria-label="ZD LLC home">
+        <img src="assets/images/zam-deshields-logo-2.png" alt="Zam DeShields logo">
+      </a>
+      <button class="nav-toggle" aria-controls="nav-links" aria-expanded="false" aria-label="Toggle navigation" onclick="this.nextElementSibling.classList.toggle('open')">
         <span></span><span></span><span></span>
       </button>
-      <ul class="nav-links">
-        <li><a href="https://zamdeshields.org/about.html">About</a></li>
-        <li><a href="https://zamdeshields.org/services.html">Services</a></li>
-        <li><a href="https://zamdeshields.org/resources.html">Resources</a></li>
-        <li><a href="https://zamdeshields.org/contact.html" class="active">Contact</a></li>
+      <ul class="nav-links" id="nav-links" role="list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
       </ul>
     </div>
   </div>
