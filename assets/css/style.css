@@ -1074,3 +1074,48 @@ button {
   line-height: 1.65;
   margin-bottom: 0;
 }
+
+/* Audience switcher bar */
+.audience-switcher {
+  background-color: var(--green-sage, #5a7a5a);
+  padding: 0.5rem 0;
+}
+
+.audience-switcher .container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.switcher-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.7);
+  white-space: nowrap;
+}
+
+.switcher-options {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.switcher-btn {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.75rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 2rem;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.8);
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.switcher-btn:hover {
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+}
+
+.switcher-btn.active {
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  font-weight: 500;
+}
