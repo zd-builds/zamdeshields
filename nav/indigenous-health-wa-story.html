@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Best Healthcare I've Ever Had Costs Almost Nothing — collective.determination</title>
-<meta name="description" content="A first-person account of discovering the ACA marketplace benefit for enrolled tribal members in Washington State — and what it took to get there.">
+<title>The Best Healthcare I've Ever Had Costs Almost Nothing | collective.determination</title>
+<meta name="description" content="A first-person account of discovering the ACA marketplace benefit for enrolled tribal members in Washington State, and what it took to get there.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
@@ -176,6 +176,62 @@
   .story-coda p:last-child { margin-bottom: 0; }
   .story-coda a { color: var(--forest-mid); font-style: normal; }
 
+  /* ── SHARE BLOCK ── */
+  .share-block {
+    padding: 2.5rem 1.5rem;
+    border-top: 1px solid var(--border);
+    text-align: center;
+  }
+  .share-prompt {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    margin-bottom: 1rem;
+    max-width: var(--max-prose);
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .share-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+  }
+  .share-btn {
+    display: inline-block;
+    font-size: 0.85rem;
+    font-weight: 500;
+    padding: 0.5rem 1.1rem;
+    border-radius: 100px;
+    border: 1px solid var(--border);
+    background: var(--white);
+    color: var(--text-mid);
+    text-decoration: none;
+    cursor: pointer;
+    font-family: inherit;
+    transition: background 0.15s, border-color 0.15s;
+    line-height: 1.4;
+  }
+  .share-btn:hover { background: var(--cream-dark); border-color: var(--text-light); color: var(--text); }
+  .share-btn--copy.copied { background: var(--forest); color: #fff; border-color: var(--forest); }
+  .share-kofi-note {
+    font-size: 0.8rem;
+    color: var(--text-light);
+    margin-bottom: 0.75rem;
+  }
+  .share-kofi-btn {
+    display: inline-block;
+    background: var(--terra);
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 500;
+    padding: 0.6rem 1.4rem;
+    border-radius: 100px;
+    transition: background 0.15s;
+  }
+  .share-kofi-btn:hover { background: #9E4D22; color: #fff; }
+
   /* ── FOOTER ── */
   footer {
     background: var(--cream-dark);
@@ -208,6 +264,7 @@
     .story-body { padding: 2rem 1rem; }
     .story-reckoning { padding: 2rem 1rem; }
     .story-coda { padding: 2rem 1rem; }
+    .share-block { padding: 2rem 1rem; }
     footer { padding: 1.5rem 1rem; }
   }
 </style>
@@ -219,7 +276,7 @@
   <div class="wrapper">
     <p class="doc-provenance">collective.determination &middot; personal account</p>
     <h1>The Best Healthcare I've Ever Had<br>Costs Almost Nothing</h1>
-    <p class="doc-subtitle">And I Almost Never Found It</p>
+    <p class="doc-subtitle">And I Discovered It By Accident</p>
     <p class="doc-byline">Zam DeShields (Chickasaw Nation) &middot; May 2026</p>
     <a href="indigenous-health-wa-nav.html" class="doc-nav-link">Navigation guide for tribal members in Washington State &rarr;</a>
   </div>
@@ -228,7 +285,7 @@
 <!-- STORY BODY -->
 <div class="story-body">
 
-  <p>In 2023 I was fired. I was also in the middle of an intensive outpatient program at AMFM, a private mental health IOP in Washington State. AMFM does not take Medicaid. I confirmed this directly. If I had been on Medicaid when I lost my job, I could not have continued treatment there at all.</p>
+  <p>In 2023 I was fired, and I was in the middle of an intensive outpatient program at AMFM, a private mental health IOP in Washington State. I lost my job-based coverage. The obvious fallback for someone with no income is Medicaid, but AMFM doesn't take it. Going that route would have meant losing access to the treatment I was in the middle of.</p>
 
   <p>When I lost my job I lost my coverage. COBRA was close to $1,000 a month. Without a job, that number was not feasible. I applied for Medicaid but was denied due to an error in the system. Instead of pushing back on the denial, I private paid something like $580 a month for Regence Gold so I could keep going to treatment. The insurance wasn't just expensive. It was the thing standing between me and losing access to care entirely.</p>
 
@@ -240,7 +297,7 @@
 
   <p>No copays. No deductible. No prior authorization requirements. Access to every provider I already had.</p>
 
-  <p>I was underemployed, doing contract work, building what would become Zam DeShields LLC. My income was low enough that the premium tax credits nearly eliminated my premium entirely. But the coverage itself &mdash; what I could actually do with it &mdash; was better than the Regence Gold I'd been paying full price for.</p>
+  <p>I was underemployed, doing contract work, building what would become Zam DeShields LLC. My income was low enough that the premium tax credits nearly eliminated my premium entirely. But what I could actually do with that coverage was better than the Regence Gold I'd been paying full price for.</p>
 
   <p>I could see specialists. I could fill every prescription. I didn't have to do the math before every appointment about whether I could afford the copay. I didn't have to navigate prior auth for every referral.</p>
 
@@ -254,11 +311,11 @@
 
   <p>I was on it for one month.</p>
 
-  <p>In that month, none of my providers could see me. Not because they didn't want to. Because they don't take Medicaid. The network I'd built, the specialists managing my complex conditions, the prescribers I'd been working with &mdash; all of them outside the Apple Health network.</p>
+  <p>In that month, none of my providers could see me. Not because they didn't want to. Because they don't take Medicaid. The network I'd built, the specialists managing my complex conditions, the prescribers I'd been working with: all of them outside the Apple Health network.</p>
 
   <p>I couldn't fill any of my prescriptions. Every medication I was taking had been written by providers who don't take Medicaid. For a month I went without all of them.</p>
 
-  <p>I tried to private pay &mdash; to just pay out of pocket to bridge the gap and keep seeing my doctors. A provider told me that wasn't possible. It would be considered fraud. This is a real rule: providers enrolled in Medicaid cannot accept private pay from Medicaid enrollees for covered services. The system that was supposed to be a safety net had closed every exit.</p>
+  <p>I tried to private pay, to just pay out of pocket to bridge the gap and keep seeing my doctors. A provider told me that wasn't possible. It would be considered fraud. This is a real rule: providers enrolled in Medicaid cannot accept private pay from Medicaid enrollees for covered services. The system that was supposed to be a safety net had closed every exit.</p>
 
   <p>I want to be clear about what that month was. I am someone managing complex conditions who needs to see a lot of specialists. Losing all my medications wasn't an inconvenience. It was a month of managed deterioration because the state had forced a coverage switch with no viable path to continuing my existing care.</p>
 
@@ -275,15 +332,27 @@
   <span class="reckoning-label">What I know now</span>
   <p>A Regence Bronze plan through Washington's marketplace is a better healthcare experience than employer insurance or Medicaid for many Indigenous people in Washington State. Not marginally better. Categorically better. Employer insurance has copays, deductibles, prior auth, network restrictions. Medicaid has all of those problems plus a provider network so constrained that I lost all my medications for a month when I was forced onto it.</p>
   <p>The marketplace Bronze plan has none of those barriers. <strong>Zero cost-sharing on any metal tier for enrolled tribal members with income at or below 300% of the federal poverty level.</strong> Any provider who accepts private insurance. No prior auth requirements that wouldn't exist for any other patient. Enrollment any month of the year.</p>
-  <p>The plan that looks like the lesser option &mdash; Bronze, the bottom tier &mdash; is the one that gave me the most access. Because when the deductible is zero and the copay is zero, the metal tier is irrelevant. What matters is the network, and the marketplace network is not the Medicaid network.</p>
+  <p>Bronze is the bottom tier. It's also the plan that gave me the most access. Because when the deductible is zero and the copay is zero, the metal tier is irrelevant. What matters is the network, and the marketplace network is not the Medicaid network.</p>
   <p>Most Indigenous people in Washington State don't know this exists. I didn't know it until I stumbled into it by accident, after paying nearly $600 a month for an off-marketplace Regence Gold plan when I didn't have to.</p>
   <p>If you're an enrolled tribal member living in Washington State, <a href="indigenous-health-wa-nav.html">the navigation is on the next page</a>. It's not complicated once you know it's there.</p>
 </div>
 
 <!-- CODA -->
 <div class="story-coda">
-  <p>This is one story. If you have one too &mdash; a system that failed you, something you figured out the hard way &mdash; collective.determination wants to hear it.</p>
+  <p>This is one story. If you have one too, a system that failed you or something you figured out the hard way, collective.determination wants to hear it.</p>
   <p>If this helped you, you can <a href="https://ko-fi.com/zam231175" target="_blank" rel="noopener noreferrer">buy me a coffee</a>. If it really helped you, share it with someone who needs it.</p>
+</div>
+
+<!-- SHARE + SUPPORT -->
+<div class="share-block">
+  <p class="share-prompt">Share this with someone who needs it.</p>
+  <div class="share-actions">
+    <button class="share-btn share-btn--copy" onclick="copyPageLink(this)">Copy link</button>
+    <a class="share-btn" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fzamdeshields.org%2Fnav%2Findigenous-health-wa-story.html&text=The+best+healthcare+I%E2%80%99ve+ever+had+costs+almost+nothing.+A+first-person+account+for+enrolled+tribal+members+in+Washington+State." target="_blank" rel="noopener noreferrer">Share on X</a>
+    <a class="share-btn" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fzamdeshields.org%2Fnav%2Findigenous-health-wa-story.html" target="_blank" rel="noopener noreferrer">Share on Facebook</a>
+  </div>
+  <p class="share-kofi-note">This guide is free. If it helped, you can support the work.</p>
+  <a href="https://ko-fi.com/zam231175" target="_blank" rel="noopener noreferrer" class="share-kofi-btn">Support on Ko-fi</a>
 </div>
 
 <!-- FOOTER -->
@@ -294,6 +363,16 @@
     <p>Content current as of May 2026. &middot; <a href="indigenous-health-wa-nav.html">Health coverage navigation guide &rarr;</a></p>
   </div>
 </footer>
+
+<script>
+function copyPageLink(btn) {
+  navigator.clipboard.writeText(window.location.href).then(function() {
+    btn.textContent = 'Copied!';
+    btn.classList.add('copied');
+    setTimeout(function() { btn.textContent = 'Copy link'; btn.classList.remove('copied'); }, 2000);
+  });
+}
+</script>
 
 </body>
 </html>

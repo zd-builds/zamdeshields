@@ -314,12 +314,68 @@
     margin-bottom: 0.6rem;
   }
 
+  /* ── SHARE BLOCK ── */
+  .share-block {
+    padding: 2.5rem 1.5rem;
+    border-top: 1px solid var(--border);
+    text-align: center;
+  }
+  .share-prompt {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    margin-bottom: 1rem;
+    max-width: var(--max-prose);
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .share-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+  }
+  .share-btn {
+    display: inline-block;
+    font-size: 0.85rem;
+    font-weight: 500;
+    padding: 0.5rem 1.1rem;
+    border-radius: 100px;
+    border: 1px solid var(--border);
+    background: var(--white);
+    color: var(--text-mid);
+    text-decoration: none;
+    cursor: pointer;
+    font-family: inherit;
+    transition: background 0.15s, border-color 0.15s;
+    line-height: 1.4;
+  }
+  .share-btn:hover { background: var(--cream-dark); border-color: var(--text-light); color: var(--text); }
+  .share-btn--copy.copied { background: var(--forest); color: #fff; border-color: var(--forest); }
+  .share-kofi-note {
+    font-size: 0.8rem;
+    color: var(--text-light);
+    margin-bottom: 0.75rem;
+  }
+  .share-kofi-btn {
+    display: inline-block;
+    background: var(--terra);
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 500;
+    padding: 0.6rem 1.4rem;
+    border-radius: 100px;
+    transition: background 0.15s;
+  }
+  .share-kofi-btn:hover { background: #9E4D22; color: #fff; }
+
   /* ── MOBILE ── */
   @media (max-width: 600px) {
     .doc-header { padding: 2.25rem 1rem 2rem; }
     section { padding: 2rem 1rem; }
     .section-lead { padding: 2rem 1rem; }
-    .kofi-block { padding: 1.75rem 1rem; }
+    .share-block { padding: 1.75rem 1rem; }
     footer { padding: 1.5rem 1rem; }
   }
 </style>
@@ -386,7 +442,11 @@
     </div>
     <p class="table-note">Note: some income from tribal trust land, treaty rights, and federal trust payments may not count toward this limit. Per capita gaming income does count. See <a href="#income-what-counts">What Income Counts?</a> below.</p>
 
-    <p>If your income is above 300% FPL, you still qualify for marketplace plans and may still qualify for premium subsidies, but the zero cost-sharing benefit at point of care no longer applies.</p>
+    <p>If your income is above 300% FPL, you still qualify for marketplace plans and may still qualify for premium subsidies, but the zero cost-sharing benefit at point of care no longer applies for regular in-network providers.</p>
+
+    <div class="callout-forest">
+      <p><strong>One protection that never goes away, regardless of income:</strong> care at Indian Health Service facilities, tribal clinics, and urban Indian health programs is always zero cost-sharing for AI/AN people. That protection has no income limit and exists completely separately from the marketplace benefit. Even if you earn above 300% FPL and lose the marketplace zero cost-sharing, IHS and tribal clinic access stays free.</p>
+    </div>
   </div>
 </section>
 
@@ -566,13 +626,27 @@
   </div>
 </section>
 
-<!-- KO-FI -->
-<div class="kofi-block">
-  <!-- Ko-fi widget: replace URL with actual username when available -->
-  <p>This guide is free. If it was useful to you, a small contribution helps cover the time and hosting.</p>
-  <!-- Ko-fi button placeholder — swap href when URL is confirmed -->
-  <a href="https://ko-fi.com/zam231175" target="_blank" rel="noopener" style="display:inline-block;background:var(--terra);color:#fff;text-decoration:none;font-size:0.875rem;font-weight:500;padding:0.6rem 1.4rem;border-radius:100px;transition:background 0.15s;" onmouseover="this.style.background='#9E4D22'" onmouseout="this.style.background='var(--terra)'">Support on Ko-fi</a>
+<!-- SHARE + SUPPORT -->
+<div class="share-block">
+  <p class="share-prompt">Share this with someone who needs it.</p>
+  <div class="share-actions">
+    <button class="share-btn share-btn--copy" onclick="copyPageLink(this)">Copy link</button>
+    <a class="share-btn" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fzamdeshields.org%2Fnav%2Findigenous-health-wa-nav.html&text=A+plain-language+guide+to+zero+cost-sharing+health+coverage+for+enrolled+tribal+members+in+Washington+State." target="_blank" rel="noopener noreferrer">Share on X</a>
+    <a class="share-btn" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fzamdeshields.org%2Fnav%2Findigenous-health-wa-nav.html" target="_blank" rel="noopener noreferrer">Share on Facebook</a>
+  </div>
+  <p class="share-kofi-note">This guide is free. If it helped, you can support the work.</p>
+  <a href="https://ko-fi.com/zam231175" target="_blank" rel="noopener noreferrer" class="share-kofi-btn">Support on Ko-fi</a>
 </div>
+
+<script>
+function copyPageLink(btn) {
+  navigator.clipboard.writeText(window.location.href).then(function() {
+    btn.textContent = 'Copied!';
+    btn.classList.add('copied');
+    setTimeout(function() { btn.textContent = 'Copy link'; btn.classList.remove('copied'); }, 2000);
+  });
+}
+</script>
 
 <!-- FOOTER -->
 <footer>
