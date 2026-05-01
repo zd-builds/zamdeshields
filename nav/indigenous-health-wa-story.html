@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Best Healthcare I've Ever Had Costs Almost Nothing — collective.determination</title>
+<meta name="description" content="A first-person account of discovering the ACA marketplace benefit for enrolled tribal members in Washington State — and what it took to get there.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --forest:       #1A3D2E;
+    --forest-mid:   #2E6649;
+    --forest-light: #4A9068;
+    --cream:        #FAF7F2;
+    --cream-dark:   #F0EBE1;
+    --terra:        #B85C2A;
+    --terra-light:  #E8DDD5;
+    --text:         #1C1C1A;
+    --text-mid:     #4A4A48;
+    --text-light:   #787873;
+    --border:       #DDD8D0;
+    --border-light: #EAE6DF;
+    --white:        #FFFFFF;
+    --radius:       10px;
+    --radius-sm:    6px;
+    --max-prose:    660px;
+  }
+
+  body {
+    font-family: 'DM Sans', system-ui, sans-serif;
+    background: var(--cream);
+    color: var(--text);
+    font-size: 16px;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3 {
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 400;
+    line-height: 1.2;
+  }
+
+  a { color: var(--forest-mid); }
+  a:hover { color: var(--forest); }
+
+  /* ── WRAPPER ── */
+  .wrapper {
+    max-width: var(--max-prose);
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  /* ── DOCUMENT HEADER ── */
+  .doc-header {
+    background: var(--forest);
+    color: #fff;
+    padding: 3rem 1.5rem 2.5rem;
+    border-bottom: 3px solid var(--terra);
+  }
+  .doc-header .wrapper { display: flex; flex-direction: column; gap: 0; }
+  .doc-provenance {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.13em;
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 1.25rem;
+    font-weight: 500;
+  }
+  .doc-provenance a { color: rgba(255,255,255,0.65); text-decoration: none; }
+  .doc-provenance a:hover { color: #fff; }
+  .doc-header h1 {
+    font-size: clamp(1.75rem, 4.5vw, 2.6rem);
+    font-weight: 300;
+    color: #fff;
+    margin-bottom: 0.5rem;
+    line-height: 1.15;
+  }
+  .doc-subtitle {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: clamp(1.05rem, 2.5vw, 1.3rem);
+    font-weight: 300;
+    font-style: italic;
+    color: rgba(255,255,255,0.65);
+    margin-bottom: 1.5rem;
+    line-height: 1.3;
+  }
+  .doc-byline {
+    font-size: 0.88rem;
+    color: rgba(255,255,255,0.55);
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+  }
+  .doc-nav-link {
+    display: inline-block;
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.75);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255,255,255,0.25);
+    padding-bottom: 1px;
+    transition: color 0.15s, border-color 0.15s;
+  }
+  .doc-nav-link:hover { color: #fff; border-color: rgba(255,255,255,0.6); }
+
+  /* ── STORY BODY ── */
+  .story-body {
+    padding: 3rem 1.5rem;
+  }
+  .story-body p {
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text-mid);
+    margin-bottom: 1.25rem;
+    max-width: var(--max-prose);
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .story-body p:last-child { margin-bottom: 0; }
+
+  .story-divider {
+    border: none;
+    width: 3rem;
+    border-top: 2px solid var(--terra);
+    margin: 2.5rem auto;
+    opacity: 0.45;
+  }
+
+  /* ── WHAT I KNOW NOW ── */
+  .story-reckoning {
+    background: var(--cream-dark);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    padding: 2.5rem 1.5rem;
+  }
+  .story-reckoning .reckoning-label {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--terra);
+    font-weight: 500;
+    margin-bottom: 0.75rem;
+    display: block;
+    max-width: var(--max-prose);
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .story-reckoning p {
+    font-size: 1.0rem;
+    line-height: 1.85;
+    color: var(--text-mid);
+    margin-bottom: 1.1rem;
+    max-width: var(--max-prose);
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .story-reckoning p:last-child { margin-bottom: 0; }
+  .story-reckoning strong { color: var(--text); font-weight: 500; }
+
+  /* ── CODA ── */
+  .story-coda {
+    padding: 2.5rem 1.5rem;
+    border-top: 1px solid var(--border);
+  }
+  .story-coda p {
+    font-size: 0.9rem;
+    line-height: 1.75;
+    color: var(--text-light);
+    font-style: italic;
+    max-width: var(--max-prose);
+    margin: 0 auto 0.75rem;
+  }
+  .story-coda p:last-child { margin-bottom: 0; }
+  .story-coda a { color: var(--forest-mid); font-style: normal; }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--cream-dark);
+    border-top: 1px solid var(--border);
+    padding: 2rem 1.5rem;
+    text-align: center;
+  }
+  footer p {
+    font-size: 0.8rem;
+    color: var(--text-light);
+    line-height: 1.7;
+    max-width: var(--max-prose);
+    margin: 0 auto;
+  }
+  footer p + p { margin-top: 0.5rem; }
+  footer a { color: var(--forest-mid); }
+  .footer-brand {
+    font-family: 'Fraunces', serif;
+    font-weight: 300;
+    font-style: italic;
+    font-size: 1rem;
+    color: var(--forest);
+    display: block;
+    margin-bottom: 0.6rem;
+  }
+
+  /* ── MOBILE ── */
+  @media (max-width: 600px) {
+    .doc-header { padding: 2.25rem 1rem 2rem; }
+    .story-body { padding: 2rem 1rem; }
+    .story-reckoning { padding: 2rem 1rem; }
+    .story-coda { padding: 2rem 1rem; }
+    footer { padding: 1.5rem 1rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- DOCUMENT HEADER -->
+<header class="doc-header">
+  <div class="wrapper">
+    <p class="doc-provenance">collective.determination &middot; personal account</p>
+    <h1>The Best Healthcare I've Ever Had<br>Costs Almost Nothing</h1>
+    <p class="doc-subtitle">And I Almost Never Found It</p>
+    <p class="doc-byline">Zam DeShields (Chickasaw Nation) &middot; May 2026</p>
+    <a href="indigenous-health-wa-nav.html" class="doc-nav-link">Navigation guide for tribal members in Washington State &rarr;</a>
+  </div>
+</header>
+
+<!-- STORY BODY -->
+<div class="story-body">
+
+  <p>In 2023 I was fired. I was also in the middle of an intensive outpatient program at AMFM, a private mental health IOP in Washington State. AMFM does not take Medicaid. I confirmed this directly. If I had been on Medicaid when I lost my job, I could not have continued treatment there at all.</p>
+
+  <p>When I lost my job I lost my coverage. COBRA was close to $1,000 a month. Without a job, that number was not feasible. I applied for Medicaid but was denied due to an error in the system. Instead of pushing back on the denial, I private paid something like $580 a month for Regence Gold so I could keep going to treatment. The insurance wasn't just expensive. It was the thing standing between me and losing access to care entirely.</p>
+
+  <p>I'm a member of the Chickasaw Nation. What I didn't know then, and what nobody had told me, is that enrolled members of federally recognized tribes can enroll in a marketplace health plan any month of the year. Not just during open enrollment. Any month.</p>
+
+  <hr class="story-divider">
+
+  <p>When open enrollment came about in the fall, I finally had capacity to contact the state and work through the incorrect denial blocking me from using the marketplace. My plan switched to Regence Bronze. My monthly premium was now only $0.54.</p>
+
+  <p>No copays. No deductible. No prior authorization requirements. Access to every provider I already had.</p>
+
+  <p>I was underemployed, doing contract work, building what would become Zam DeShields LLC. My income was low enough that the premium tax credits nearly eliminated my premium entirely. But the coverage itself &mdash; what I could actually do with it &mdash; was better than the Regence Gold I'd been paying full price for.</p>
+
+  <p>I could see specialists. I could fill every prescription. I didn't have to do the math before every appointment about whether I could afford the copay. I didn't have to navigate prior auth for every referral.</p>
+
+  <p>I re-enrolled the following year. My income had increased enough that my premium rose to about $185 a month. Still no copays. Still no deductible. Still my providers.</p>
+
+  <p>That $185 was less than what I would have been paying in a single day of COBRA.</p>
+
+  <hr class="story-divider">
+
+  <p>In early 2026 my unemployment claim was denied. The state required me to switch to Medicaid (Apple Health) as a condition of the process.</p>
+
+  <p>I was on it for one month.</p>
+
+  <p>In that month, none of my providers could see me. Not because they didn't want to. Because they don't take Medicaid. The network I'd built, the specialists managing my complex conditions, the prescribers I'd been working with &mdash; all of them outside the Apple Health network.</p>
+
+  <p>I couldn't fill any of my prescriptions. Every medication I was taking had been written by providers who don't take Medicaid. For a month I went without all of them.</p>
+
+  <p>I tried to private pay &mdash; to just pay out of pocket to bridge the gap and keep seeing my doctors. A provider told me that wasn't possible. It would be considered fraud. This is a real rule: providers enrolled in Medicaid cannot accept private pay from Medicaid enrollees for covered services. The system that was supposed to be a safety net had closed every exit.</p>
+
+  <p>I want to be clear about what that month was. I am someone managing complex conditions who needs to see a lot of specialists. Losing all my medications wasn't an inconvenience. It was a month of managed deterioration because the state had forced a coverage switch with no viable path to continuing my existing care.</p>
+
+  <hr class="story-divider">
+
+  <p>I re-launched Zam DeShields LLC. I projected my revenue forward and calculated what income level would put me back into the subsidized marketplace plan. I re-applied. Because I re-applied after the 15th of the month I was told my coverage would start the following month, which would have meant another month without medications and without my providers. I requested a special exception. It was granted. My coverage started at the beginning of the month.</p>
+
+  <p>I'm back on Regence Bronze. My current monthly premium is $0. No copays. No deductible. My providers, my prescriptions, my specialists. All of it back.</p>
+
+</div>
+
+<!-- WHAT I KNOW NOW -->
+<div class="story-reckoning">
+  <span class="reckoning-label">What I know now</span>
+  <p>A Regence Bronze plan through Washington's marketplace is a better healthcare experience than employer insurance or Medicaid for many Indigenous people in Washington State. Not marginally better. Categorically better. Employer insurance has copays, deductibles, prior auth, network restrictions. Medicaid has all of those problems plus a provider network so constrained that I lost all my medications for a month when I was forced onto it.</p>
+  <p>The marketplace Bronze plan has none of those barriers. <strong>Zero cost-sharing on any metal tier for enrolled tribal members with income at or below 300% of the federal poverty level.</strong> Any provider who accepts private insurance. No prior auth requirements that wouldn't exist for any other patient. Enrollment any month of the year.</p>
+  <p>The plan that looks like the lesser option &mdash; Bronze, the bottom tier &mdash; is the one that gave me the most access. Because when the deductible is zero and the copay is zero, the metal tier is irrelevant. What matters is the network, and the marketplace network is not the Medicaid network.</p>
+  <p>Most Indigenous people in Washington State don't know this exists. I didn't know it until I stumbled into it by accident, after paying nearly $600 a month for an off-marketplace Regence Gold plan when I didn't have to.</p>
+  <p>If you're an enrolled tribal member living in Washington State, <a href="indigenous-health-wa-nav.html">the navigation is on the next page</a>. It's not complicated once you know it's there.</p>
+</div>
+
+<!-- CODA -->
+<div class="story-coda">
+  <p>This is one story. If you have one too &mdash; a system that failed you, something you figured out the hard way &mdash; collective.determination wants to hear it.</p>
+  <p>If this helped you, you can <a href="https://ko-fi.com/zam231175" target="_blank" rel="noopener noreferrer">buy me a coffee</a>. If it really helped you, share it with someone who needs it.</p>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrapper">
+    <span class="footer-brand">collective.determination</span>
+    <p>Stories and navigation for people figuring out systems that weren't designed to be figured out.</p>
+    <p>Content current as of May 2026. &middot; <a href="indigenous-health-wa-nav.html">Health coverage navigation guide &rarr;</a></p>
+  </div>
+</footer>
+
+</body>
+</html>

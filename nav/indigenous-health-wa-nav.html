@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Health Coverage for Tribal Members in Washington State — Navigation Reference</title>
+<meta name="description" content="A plain-language navigation guide for enrolled tribal members in Washington State. Zero cost-sharing marketplace health coverage, income thresholds, how to apply, and what can go wrong.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --forest:       #1A3D2E;
+    --forest-mid:   #2E6649;
+    --forest-light: #4A9068;
+    --cream:        #FAF7F2;
+    --cream-dark:   #F0EBE1;
+    --terra:        #B85C2A;
+    --terra-light:  #E8DDD5;
+    --text:         #1C1C1A;
+    --text-mid:     #4A4A48;
+    --text-light:   #787873;
+    --border:       #DDD8D0;
+    --border-light: #EAE6DF;
+    --white:        #FFFFFF;
+    --radius:       10px;
+    --radius-sm:    6px;
+    --max-prose:    660px;
+  }
+
+  body {
+    font-family: 'DM Sans', system-ui, sans-serif;
+    background: var(--cream);
+    color: var(--text);
+    font-size: 16px;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3 {
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 400;
+    line-height: 1.2;
+  }
+
+  a { color: var(--forest-mid); }
+  a:hover { color: var(--forest); }
+
+  /* ── WRAPPER ── */
+  .wrapper {
+    max-width: var(--max-prose);
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  /* ── DOCUMENT HEADER ── */
+  .doc-header {
+    background: var(--forest);
+    color: #fff;
+    padding: 3rem 1.5rem 2.5rem;
+    border-bottom: 3px solid var(--terra);
+  }
+  .doc-header .wrapper { display: flex; flex-direction: column; gap: 0; }
+  .doc-provenance {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.13em;
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 1.25rem;
+    font-weight: 500;
+  }
+  .doc-provenance a { color: rgba(255,255,255,0.65); text-decoration: none; }
+  .doc-provenance a:hover { color: #fff; }
+  .doc-header h1 {
+    font-size: clamp(1.6rem, 4vw, 2.2rem);
+    font-weight: 300;
+    color: #fff;
+    margin-bottom: 0.75rem;
+    line-height: 1.15;
+  }
+  .doc-byline {
+    font-size: 0.88rem;
+    color: rgba(255,255,255,0.6);
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+  }
+  .doc-story-link {
+    display: inline-block;
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.75);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255,255,255,0.25);
+    padding-bottom: 1px;
+    transition: color 0.15s, border-color 0.15s;
+    font-style: italic;
+  }
+  .doc-story-link:hover { color: #fff; border-color: rgba(255,255,255,0.6); }
+
+  /* ── SHORT VERSION / LEAD ── */
+  .section-lead {
+    background: var(--cream-dark);
+    border-bottom: 1px solid var(--border);
+    padding: 2.5rem 1.5rem;
+  }
+  .section-lead p {
+    font-size: 1rem;
+    color: var(--text-mid);
+    margin-bottom: 0.9rem;
+    max-width: var(--max-prose);
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .section-lead p:last-child { margin-bottom: 0; }
+  .section-lead .lead-label {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--terra);
+    font-weight: 500;
+    margin-bottom: 0.6rem;
+    display: block;
+  }
+
+  /* ── SECTIONS ── */
+  section {
+    padding: 2.5rem 1.5rem;
+    border-bottom: 1px solid var(--border);
+  }
+  section:last-of-type { border-bottom: none; }
+  section.section-alt { background: var(--cream-dark); }
+
+  .section-label {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--terra);
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    display: block;
+  }
+
+  section h2 {
+    font-size: clamp(1.2rem, 3vw, 1.55rem);
+    color: var(--forest);
+    margin-bottom: 1rem;
+    font-weight: 400;
+  }
+
+  section p {
+    color: var(--text-mid);
+    margin-bottom: 0.9rem;
+    font-size: 0.975rem;
+  }
+  section p:last-child { margin-bottom: 0; }
+
+  section ul, section ol {
+    padding-left: 1.4rem;
+    margin: 0.5rem 0 0.9rem;
+  }
+  section li {
+    color: var(--text-mid);
+    font-size: 0.975rem;
+    margin-bottom: 0.4rem;
+    line-height: 1.6;
+  }
+  section li:last-child { margin-bottom: 0; }
+  section strong { color: var(--text); font-weight: 500; }
+
+  /* ── INCOME TABLE ── */
+  .income-table-wrap {
+    margin: 1.5rem 0;
+    overflow-x: auto;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--white);
+  }
+  table { width: 100%; border-collapse: collapse; }
+  thead { background: var(--forest); }
+  thead th {
+    color: #fff;
+    font-weight: 500;
+    font-size: 0.85rem;
+    text-align: left;
+    padding: 0.8rem 1.1rem;
+    letter-spacing: 0.02em;
+  }
+  tbody tr { border-bottom: 1px solid var(--border); }
+  tbody tr:last-child { border-bottom: none; }
+  tbody tr:nth-child(even) { background: var(--cream); }
+  tbody td {
+    padding: 0.75rem 1.1rem;
+    font-size: 0.925rem;
+    color: var(--text);
+  }
+  tbody td:not(:first-child) { font-weight: 500; color: var(--forest-mid); }
+  .table-note {
+    font-size: 0.8rem;
+    color: var(--text-light);
+    margin-top: 0.5rem;
+    font-style: italic;
+  }
+
+  /* ── CALLOUT ── */
+  .callout {
+    background: var(--terra-light);
+    border-left: 3px solid var(--terra);
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    padding: 0.9rem 1.1rem;
+    margin: 1.25rem 0;
+  }
+  .callout p { font-size: 0.9rem; color: var(--text); margin: 0 0 0.5rem; }
+  .callout p:last-child { margin-bottom: 0; }
+  .callout strong { color: var(--terra); }
+
+  /* ── FOREST CALLOUT (for contextual notes) ── */
+  .callout-forest {
+    background: rgba(26,61,46,0.06);
+    border-left: 3px solid var(--forest-mid);
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    padding: 0.9rem 1.1rem;
+    margin: 1.25rem 0;
+  }
+  .callout-forest p { font-size: 0.9rem; color: var(--text-mid); margin: 0 0 0.5rem; }
+  .callout-forest p:last-child { margin-bottom: 0; }
+
+  /* ── WARN LIST (Things That Can Go Wrong) ── */
+  .warn-list { display: flex; flex-direction: column; gap: 1.25rem; margin: 1.25rem 0; }
+  .warn-item {
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--terra);
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    background: var(--white);
+    padding: 1rem 1.1rem;
+  }
+  .warn-title {
+    font-weight: 500;
+    font-size: 0.95rem;
+    color: var(--text);
+    margin-bottom: 0.4rem;
+  }
+  .warn-item p {
+    font-size: 0.9rem;
+    color: var(--text-mid);
+    margin-bottom: 0.4rem;
+  }
+  .warn-item p:last-child { margin-bottom: 0; }
+
+  /* ── RESOURCE LIST (Where to Go) ── */
+  .resource-list { display: flex; flex-direction: column; gap: 1rem; margin: 1.25rem 0; }
+  .resource-item {
+    border-bottom: 1px solid var(--border-light);
+    padding-bottom: 1rem;
+  }
+  .resource-item:last-child { border-bottom: none; padding-bottom: 0; }
+  .resource-name {
+    font-weight: 500;
+    font-size: 0.95rem;
+    color: var(--text);
+    margin-bottom: 0.3rem;
+  }
+  .resource-item p { font-size: 0.9rem; color: var(--text-mid); margin: 0; }
+
+  /* ── NEED LIST (What You Need to Apply) ── */
+  section ul.need-list { list-style: none; padding-left: 0; margin: 0.75rem 0; }
+  section ul.need-list li {
+    padding: 0.55rem 0;
+    border-bottom: 1px solid var(--border-light);
+    font-size: 0.95rem;
+    color: var(--text-mid);
+  }
+  section ul.need-list li:first-child { border-top: 1px solid var(--border-light); }
+  section ul.need-list li::before { content: '—  '; color: var(--terra); font-weight: 500; }
+
+  /* ── KO-FI ── */
+  .kofi-block {
+    padding: 2rem 1.5rem;
+    text-align: center;
+    border-top: 1px solid var(--border);
+    background: var(--cream);
+  }
+  .kofi-block p {
+    font-size: 0.875rem;
+    color: var(--text-light);
+    margin-bottom: 0.75rem;
+  }
+  /* Ko-fi widget iframe resets */
+  .kofi-block iframe { border: none; max-width: 100%; }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--cream-dark);
+    border-top: 1px solid var(--border);
+    padding: 2rem 1.5rem;
+    text-align: center;
+  }
+  footer p {
+    font-size: 0.8rem;
+    color: var(--text-light);
+    line-height: 1.7;
+    max-width: var(--max-prose);
+    margin: 0 auto;
+  }
+  footer p + p { margin-top: 0.5rem; }
+  footer a { color: var(--forest-mid); }
+  .footer-brand {
+    font-family: 'Fraunces', serif;
+    font-weight: 300;
+    font-style: italic;
+    font-size: 1rem;
+    color: var(--forest);
+    display: block;
+    margin-bottom: 0.6rem;
+  }
+
+  /* ── MOBILE ── */
+  @media (max-width: 600px) {
+    .doc-header { padding: 2.25rem 1rem 2rem; }
+    section { padding: 2rem 1rem; }
+    .section-lead { padding: 2rem 1rem; }
+    .kofi-block { padding: 1.75rem 1rem; }
+    footer { padding: 1.5rem 1rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- DOCUMENT HEADER -->
+<header class="doc-header">
+  <div class="wrapper">
+    <p class="doc-provenance">collective.determination &middot; navigation guide</p>
+    <h1>Health Coverage for Tribal Members<br>in Washington State</h1>
+    <p class="doc-byline">For enrolled members of federally recognized tribes in Washington State &middot; Version 1 &middot; May 2026</p>
+    <a href="indigenous-health-wa-story.html" class="doc-story-link">How I found this pathway &mdash; and why it took so long &rarr;</a>
+  </div>
+</header>
+
+<!-- THE SHORT VERSION -->
+<div class="section-lead" id="summary">
+  <span class="lead-label" style="max-width:var(--max-prose);margin:0 auto 0.6rem;display:block;">The short version</span>
+  <p>If you are an enrolled member of a federally recognized tribe, there is a pathway to a private health insurance plan through Washington State's marketplace that can give you full coverage with no deductible, no copays, and no coinsurance &mdash; and you may be able to get it any month of the year, not just during open enrollment.</p>
+  <p>Most people don't know this exists. This guide walks you through what the benefit is, who qualifies, what you need, and how to actually get it in Washington State.</p>
+  <p>The Affordable Care Act includes special protections for American Indian and Alaska Native people. One of those protections is that if your household income is at or below 300% of the federal poverty level, you can enroll in a marketplace plan and pay nothing at the point of care &mdash; no deductible, no copay, no coinsurance &mdash; on any plan tier. You still pay a monthly premium, but premium subsidies are available that can significantly reduce or sometimes eliminate that cost.</p>
+  <p>This is different from Apple Health (Medicaid). It is private insurance accessed through Washington's marketplace, with the federal trust responsibility embedded in how your costs are structured.</p>
+</div>
+
+<!-- WHO THIS APPLIES TO -->
+<section id="who">
+  <div class="wrapper">
+    <span class="section-label">Eligibility</span>
+    <h2>Who this applies to</h2>
+    <p>You qualify for these special AI/AN marketplace protections if you are:</p>
+    <ul>
+      <li>An enrolled member of a federally recognized tribe, <strong>or</strong></li>
+      <li>A shareholder in an Alaska Native Claims Settlement Act (ANCSA) Corporation</li>
+    </ul>
+    <p>Your family members who are not tribal members or ANCSA shareholders do not qualify for the same zero cost-sharing benefit, even if you apply together. More on that below under <a href="#mixed">Mixed-Status Households</a>.</p>
+    <p>You do not have to live on a reservation. You do not have to currently use Indian Health Service. You just have to be an enrolled member of a federally recognized tribe and be able to document it.</p>
+  </div>
+</section>
+
+<!-- INCOME THRESHOLD -->
+<section class="section-alt" id="income">
+  <div class="wrapper">
+    <span class="section-label">Income limit</span>
+    <h2>The income threshold</h2>
+    <p>The zero cost-sharing benefit applies if your household income is at or below 300% of the federal poverty level. For 2026 coverage, the relevant numbers (based on 2025 federal poverty guidelines) are roughly:</p>
+
+    <div class="income-table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Household size</th>
+            <th>300% FPL (annual)</th>
+            <th>300% FPL (monthly)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>1 person</td><td>$45,180</td><td>$3,765</td></tr>
+          <tr><td>2 people</td><td>$61,320</td><td>$5,110</td></tr>
+          <tr><td>3 people</td><td>$79,950</td><td>$6,663</td></tr>
+          <tr><td>4+ people</td><td colspan="2" style="color:var(--text-light);font-weight:400;">Check Washington Healthplanfinder directly &mdash; threshold increases with each additional person</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="table-note">Note: some income from tribal trust land, treaty rights, and federal trust payments may not count toward this limit. Per capita gaming income does count. See <a href="#income-what-counts">What Income Counts?</a> below.</p>
+
+    <p>If your income is above 300% FPL, you still qualify for marketplace plans and may still qualify for premium subsidies, but the zero cost-sharing benefit at point of care no longer applies.</p>
+  </div>
+</section>
+
+<!-- WHAT ZERO COST-SHARING MEANS -->
+<section id="what-it-means">
+  <div class="wrapper">
+    <span class="section-label">The benefit</span>
+    <h2>What "zero cost-sharing" actually means</h2>
+    <p>When you have this benefit and you see an in-network provider, you pay nothing out of pocket for covered services beyond your monthly premium. That means:</p>
+    <ul>
+      <li>No deductible to meet before coverage kicks in</li>
+      <li>No copays at appointments</li>
+      <li>No coinsurance (the percentage you'd normally pay after a deductible)</li>
+    </ul>
+    <p>This applies to any metal-tier plan (Bronze, Silver, Gold, Platinum). The cost-sharing protection is the same regardless of which tier you choose.</p>
+
+    <div class="callout-forest">
+      <p>There is one important exception: if you get care from an Indian Health Service facility, tribal clinic, or urban Indian health program, you have zero out-of-pocket costs regardless of your income. That is a separate protection that exists even outside this marketplace benefit.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ENROLL ANY MONTH -->
+<section class="section-alt" id="enrollment">
+  <div class="wrapper">
+    <span class="section-label">Enrollment</span>
+    <h2>You can enroll any month</h2>
+    <p>Most people have to wait for the annual open enrollment window (November through mid-January). Tribal members and ANCSA shareholders can enroll in or change a marketplace plan any month of the year through a monthly special enrollment period.</p>
+    <p>This is significant. If your income changes, your situation changes, or you just found out this benefit exists, you do not have to wait.</p>
+  </div>
+</section>
+
+<!-- APPLE HEALTH -->
+<section id="apple-health">
+  <div class="wrapper">
+    <span class="section-label">Apple Health vs. marketplace</span>
+    <h2>What about Apple Health (Medicaid)?</h2>
+    <p>In Washington State, if your household income is below 138% of the federal poverty level, you will likely be directed to Apple Health rather than a marketplace plan. Apple Health is free and covers most services, and AI/AN people have additional Apple Health protections including no cost-sharing for services at IHS, tribal, and urban Indian facilities.</p>
+    <p>If you are above 138% FPL and below 300% FPL, the marketplace zero cost-sharing pathway is often the better option because it gives you access to a broader provider network than Apple Health while still costing you nothing at the point of care.</p>
+    <p>If you are right at or near 138% FPL, it is worth comparing what you would actually get through each program before choosing.</p>
+  </div>
+</section>
+
+<!-- PREMIUMS -->
+<section class="section-alt" id="premiums">
+  <div class="wrapper">
+    <span class="section-label">Monthly cost</span>
+    <h2>What about premiums?</h2>
+    <p>You still pay a monthly premium for the marketplace plan. Premium tax credits (subsidies) are available to help reduce that cost.</p>
+
+    <div class="callout">
+      <p><strong>Important for 2026:</strong> The enhanced premium subsidies that were in place from 2021 through 2025 expired at the end of 2025 and were not renewed by Congress. Premiums are higher than last year for many people, and subsidies no longer cover people above 400% FPL. If you were enrolled before and your premium changed significantly, this is why.</p>
+    </div>
+
+    <p>Washington State also has its own additional premium subsidy program (Cascade Care Savings) that can help lower costs further for people who qualify. This is separate from the federal premium tax credit and is specific to Washington.</p>
+    <p>The best way to see your actual premium after subsidies is to run through Washington Healthplanfinder with your actual income numbers. The estimated cost you see there reflects both federal and state subsidies.</p>
+  </div>
+</section>
+
+<!-- IHS AND TRIBAL CLINICS -->
+<section id="ihs">
+  <div class="wrapper">
+    <span class="section-label">IHS and tribal clinics</span>
+    <h2>What about using IHS and tribal clinics?</h2>
+    <p>Enrolling in a marketplace plan does not give up your access to Indian Health Service, tribal health programs, or urban Indian health programs. You can continue to use those services the same way you do now. Having a marketplace plan actually expands your options &mdash; your tribal clinic stays available, and you also gain access to the broader network of providers in your plan.</p>
+    <p>When you use your marketplace plan at a non-IHS provider, the plan becomes the primary payer, and IHS or tribal funding is secondary. This is how it is supposed to work &mdash; it draws down more resources into your care.</p>
+  </div>
+</section>
+
+<!-- WHAT INCOME COUNTS -->
+<section class="section-alt" id="income-what-counts">
+  <div class="wrapper">
+    <span class="section-label">Income calculation</span>
+    <h2>What income counts?</h2>
+    <p>Income calculations for marketplace plans use a measure called Modified Adjusted Gross Income (MAGI). For AI/AN applicants, some income that would normally count is excluded:</p>
+    <ul>
+      <li>Income from Indian trust land (rents, royalties, use rights) generally <strong>does not count</strong></li>
+      <li>Income from treaty fishing rights and similar treaty-protected activities generally <strong>does not count</strong></li>
+      <li>Per capita income from tribal gaming generally <strong>does count</strong> and must be reported</li>
+    </ul>
+    <p>If you have income from tribal sources and you are unsure whether it counts, Washington Healthplanfinder can walk through it with you, or you can request help from a Navigator or Certified Application Counselor.</p>
+  </div>
+</section>
+
+<!-- MIXED-STATUS HOUSEHOLDS -->
+<section id="mixed">
+  <div class="wrapper">
+    <span class="section-label">Mixed households</span>
+    <h2>Mixed-status households</h2>
+    <p>If your household includes both tribal members and non-members, the zero cost-sharing benefit only applies to the tribal members. You can apply on the same Healthplanfinder application for the purpose of getting premium subsidies for everyone, but the tribal members should enroll in a separate plan from the non-members to actually access the zero cost-sharing benefit.</p>
+
+    <div class="callout">
+      <p><strong>If you are all on the same plan, the cost-sharing protection for the tribal members may not apply correctly.</strong> This is one of the most common navigation mistakes. A tribal assister or Navigator can make sure you are structured correctly before you finalize your enrollment.</p>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT YOU NEED -->
+<section class="section-alt" id="what-you-need">
+  <div class="wrapper">
+    <span class="section-label">Documentation</span>
+    <h2>What you need to apply</h2>
+    <ul class="need-list">
+      <li><strong>Proof of tribal enrollment</strong> &mdash; any official document issued by your tribe that shows you are an enrolled member. This could be your tribal ID card, a letter from enrollment, or another document that identifies you as a member. You have 90 days from application to provide documentation.</li>
+      <li><strong>Income information</strong> &mdash; your best estimate of your 2026 household income</li>
+      <li><strong>Social Security numbers</strong> for all household members applying</li>
+      <li><strong>Basic household information</strong> &mdash; size, ages</li>
+    </ul>
+  </div>
+</section>
+
+<!-- WHERE TO GO -->
+<section id="where-to-go">
+  <div class="wrapper">
+    <span class="section-label">Where to apply</span>
+    <h2>Where to go in Washington State</h2>
+    <p>Washington uses its own marketplace, called Washington Healthplanfinder. Go to <strong><a href="https://www.wahealthplanfinder.org" target="_blank" rel="noopener">wahealthplanfinder.org</a></strong> to apply. Do not use healthcare.gov &mdash; that is the federal marketplace for states that do not have their own.</p>
+    <p>When you get to the application, mark that you are a tribal member. This triggers the AI/AN-specific questions and unlocks the zero cost-sharing option if you are eligible.</p>
+    <p>Free help is available from:</p>
+
+    <div class="resource-list">
+      <div class="resource-item">
+        <div class="resource-name">Navigators and Certified Application Counselors</div>
+        <p>Trained assistants who can walk through the application with you at no cost. Find them through wahealthplanfinder.org or by calling <a href="tel:18559234633">1-855-923-4633</a>.</p>
+      </div>
+      <div class="resource-item">
+        <div class="resource-name">Your tribal health department or benefits coordinator</div>
+        <p>Many tribes have staff who can help members navigate the marketplace application and understand their options. Tribal assisters are trained specifically on AI/AN marketplace rules.</p>
+      </div>
+      <div class="resource-item">
+        <div class="resource-name">Urban Indian health programs</div>
+        <p>If you live off-reservation in an urban area, your local urban Indian health program may have enrollment support.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- THINGS THAT CAN GO WRONG -->
+<section class="section-alt" id="pitfalls">
+  <div class="wrapper">
+    <span class="section-label">Common problems</span>
+    <h2>Things that can go wrong</h2>
+
+    <div class="warn-list">
+      <div class="warn-item">
+        <div class="warn-title">The marketplace puts you in Apple Health instead of a marketplace plan.</div>
+        <p>If your income is entered a certain way, the system may redirect you to Apple Health. This can be the right call depending on your situation, but if you want to use the marketplace zero cost-sharing pathway, make sure your income is entered accurately and that your tribal status is marked. A Navigator can help you if the system is not giving you the option you expect.</p>
+      </div>
+      <div class="warn-item">
+        <div class="warn-title">You end up on a plan with your non-tribal family members.</div>
+        <p>As noted above, this means the zero cost-sharing protection may not apply to you. Separate plans for tribal and non-tribal household members is the right structure.</p>
+      </div>
+      <div class="warn-item">
+        <div class="warn-title">You do not know which plan to pick.</div>
+        <p>With zero cost-sharing, any metal tier covers your costs at the point of care. The main variable is your monthly premium after subsidies. Run the comparison in Healthplanfinder and look at what your actual monthly cost would be for each plan. A Bronze plan typically has the lowest premium; with subsidies, a Silver plan is sometimes cheaper than it appears.</p>
+      </div>
+      <div class="warn-item">
+        <div class="warn-title">Your income changes mid-year.</div>
+        <p>You can report income changes to Healthplanfinder and adjust your coverage. This matters because your premium subsidy is based on your estimated annual income. If your income goes up significantly, you may owe back some of the subsidy at tax time. Report changes when they happen to avoid a surprise.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- THE BIGGER CONTEXT -->
+<section id="context">
+  <div class="wrapper">
+    <span class="section-label">Why this exists</span>
+    <h2>The bigger context</h2>
+    <p>This benefit exists because the federal government has a trust responsibility to tribal nations &mdash; a legal and political obligation that flows from treaty relationships and the sovereign-to-sovereign relationship between tribes and the United States. The zero cost-sharing protections in the ACA are one expression of that responsibility in the context of health care. IHS and tribal health programs are another.</p>
+    <p>These protections are not charity. They are not a government favor. They are part of what the federal government owes to tribal nations as part of that foundational relationship.</p>
+    <p>Knowing they exist, and knowing how to use them, is part of how that relationship becomes real rather than just words in a law.</p>
+
+    <div class="callout-forest" style="margin-top:1.5rem;">
+      <p>There is a first-person account of navigating this pathway &mdash; what it took to find it, what it actually cost, and what it means. <a href="indigenous-health-wa-story.html">Read the story &rarr;</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- KO-FI -->
+<div class="kofi-block">
+  <!-- Ko-fi widget: replace URL with actual username when available -->
+  <p>This guide is free. If it was useful to you, a small contribution helps cover the time and hosting.</p>
+  <!-- Ko-fi button placeholder — swap href when URL is confirmed -->
+  <a href="https://ko-fi.com/zam231175" target="_blank" rel="noopener" style="display:inline-block;background:var(--terra);color:#fff;text-decoration:none;font-size:0.875rem;font-weight:500;padding:0.6rem 1.4rem;border-radius:100px;transition:background 0.15s;" onmouseover="this.style.background='#9E4D22'" onmouseout="this.style.background='var(--terra)'">Support on Ko-fi</a>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <span class="footer-brand">collective.determination</span>
+  <p>Content current as of May 2026. Income thresholds and subsidy rules are updated annually.<br>
+  Always verify current numbers through <a href="https://www.wahealthplanfinder.org" target="_blank" rel="noopener">wahealthplanfinder.org</a> or a Navigator before enrolling.</p>
+  <p style="margin-top:0.5rem;">Questions or corrections: <a href="mailto:zam@zamdeshields.org">contact us</a>.</p>
+</footer>
+
+</body>
+</html>
