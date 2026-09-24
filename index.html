@@ -3,8 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Zam DeShields — AI, Data &amp; Privacy Navigation</title>
-  <meta name="description" content="Zam DeShields (they/them) helps people and organizations navigate AI, data, and surveillance on their own terms — shaped by tribal governance, disability justice, and community-centered practice.">
+  <title>Zam DeShields — AI &amp; Data Decisions for Tribal Nations</title>
+  <meta name="description" content="Zam DeShields helps Tribal Nations, Indigenous organizations, and the institutions that work with them make AI and data decisions they control.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Zam DeShields — AI &amp; Data Decisions for Tribal Nations" />
+  <meta property="og:description" content="Zam DeShields helps Tribal Nations, Indigenous organizations, and the institutions that work with them make AI and data decisions they control." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://zamdeshields.org/" />
+  <meta property="og:image" content="https://zamdeshields.org/assets/images/og-image.png" />
+
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,16 +24,18 @@
   <nav class="site-nav" aria-label="Main navigation">
     <div class="container">
       <div class="nav-inner">
+        <a href="index.html" class="nav-logo" aria-label="ZD LLC home">
+          <img src="assets/images/zd_logo_nav.svg" alt="Zam DeShields logo">
+        </a>
         <button class="nav-toggle" aria-controls="nav-links" aria-expanded="false" aria-label="Toggle navigation">
           <span></span><span></span><span></span>
         </button>
         <ul class="nav-links" id="nav-links" role="list">
           <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="services.html">For organizations</a></li>
-          <li><a href="resources.html">Resources</a></li>
-          <li><a href="speaking.html">Speaking</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#work">What I Offer</a></li>
+          <li><a href="#engagements">Engagements</a></li>
+          <li><a href="#contact">Contact</a></li>
           <li><a href="https://www.linkedin.com/in/zam-deshields/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
         </ul>
       </div>
@@ -42,8 +52,11 @@
       >
       <div class="hero-content">
         <div class="hero-text">
-          <p class="hero-lead">I help people and organizations navigate AI, data, and surveillance on their own terms — not on someone else's.</p>
-          <p class="hero-secondary">My work is shaped by tribal governance, disability justice, and the reality that for trans people, Indigenous communities, and people with disabilities, privacy is often survival.</p>
+          <p class="hero-lead">I help Tribal Nations, Indigenous organizations, and the institutions that work with them make AI and data decisions they control.</p>
+          <div style="display:flex; gap:1rem; flex-wrap:wrap; margin-top:0.5rem;">
+            <a href="#work" class="btn btn-outline">See what I offer</a>
+            <a href="#contact" class="btn btn-outline">Get in touch</a>
+          </div>
         </div>
         <div class="hero-headshot">
           <img
@@ -56,43 +69,144 @@
     </div>
   </section>
 
-  <!-- Two-Door Section -->
-  <section class="two-door" aria-labelledby="two-door-heading">
+  <!-- About -->
+  <section id="about" aria-labelledby="about-heading">
     <div class="container">
-      <h2 id="two-door-heading">Where are you starting from?</h2>
-      <div class="door-grid">
-        <article class="door-card">
-          <h3>I'm here as an individual</h3>
-          <p>Free guides on navigating AI, data, and privacy risks — no jargon, no CS degree required.</p>
-          <a href="individuals.html" class="btn btn-outline-dark">Start here →</a>
-        </article>
-        <article class="door-card">
-          <h3>I'm here for my organization</h3>
-          <p>Strategy, training, and speaking for tribal governments, institutions, and mission-driven orgs.</p>
-          <a href="services.html" class="btn btn-outline-dark">Explore services →</a>
-        </article>
+      <p class="section-label">About</p>
+      <h2 id="about-heading">About</h2>
+      <div class="divider" aria-hidden="true"></div>
+      <div class="about-prose" style="margin-top: 1.5rem;">
+        <p>I'm a Chickasaw Nation citizen. I spent eight years leading planning and community development for the Swinomish Indian Tribal Community and Samish Indian Nation. I then founded and ran Microsoft's Indigenous Program Office across the US, Canada, Australia, and New Zealand, where I co-led work bringing four low-resource Indigenous languages into AI translation models. I run ZD LLC and built the <a href="https://indigenousaicommons.org" target="_blank" rel="noopener noreferrer">Indigenous AI Commons</a>.</p>
+        <!-- [FILL] Add a line and link once the Indigenous Data Alliance publishes Zam's contributor title. -->
       </div>
     </div>
   </section>
 
-  <!-- Credentialing Strip -->
-  <div class="credentialing-strip" role="complementary" aria-label="Background and credentials">
+  <!-- What I Offer -->
+  <section id="work" class="section-alt" aria-labelledby="work-heading">
     <div class="container">
-      <p>Chickasaw Nation citizen. Eight years leading tribal planning and community development. Led Microsoft's Indigenous Program Office across four countries. Currently a graduate student in Rehabilitation Counseling at Western Washington University.</p>
-      <p>Presented or engaged with: <a href="https://usindigenousdatanetwork.org/" target="_blank" rel="noopener noreferrer">US Indigenous Data Sovereignty Network</a> · <a href="https://localcontexts.org/" target="_blank" rel="noopener noreferrer">Local Contexts</a> · <a href="https://nni.arizona.edu/" target="_blank" rel="noopener noreferrer">Native Nations Institute</a> · Government of Nunavut · University of Alberta Indigenous Research Symposium</p>
-    </div>
-  </div>
-
-  <!-- Footer CTA -->
-  <div class="footer-cta">
-    <div class="container">
-      <h2>Ready to talk?</h2>
-      <div class="footer-cta-buttons">
-        <a href="individuals.html" class="btn btn-outline">For individuals</a>
-        <a href="contact.html" class="btn btn-outline">For organizations</a>
+      <p class="section-label">What I Offer</p>
+      <h2 id="work-heading">What I offer</h2>
+      <div class="divider" aria-hidden="true"></div>
+      <div class="services-grid">
+        <div class="service-card">
+          <h3>Talks and keynotes</h3>
+          <p>Indigenous data sovereignty, AI governance, and the long history of data used to count and control Indigenous Peoples.</p>
+        </div>
+        <div class="service-card">
+          <h3>Trainings and workshops</h3>
+          <p>Single sessions or a series, for tribal staff, language programs, health professionals, and researchers.</p>
+        </div>
+        <div class="service-card">
+          <h3>AI tool and vendor review</h3>
+          <p>Before you adopt a tool, I review it against a written framework: what data it collects, where that data goes, and what the terms allow. You get plain-language findings.</p>
+        </div>
+        <div class="service-card">
+          <h3>Policy and framework writing</h3>
+          <p>AI and data governance policies scoped to your Nation or organization.</p>
+        </div>
+        <div class="service-card">
+          <h3>Something else?</h3>
+          <p>Send me an email about your project.</p>
+        </div>
       </div>
     </div>
-  </div>
+  </section>
+
+  <!-- Selected Engagements -->
+  <section id="engagements" aria-labelledby="engagements-heading">
+    <div class="container">
+      <p class="section-label">Selected Engagements</p>
+      <h2 id="engagements-heading">Selected engagements</h2>
+      <div class="divider" aria-hidden="true"></div>
+
+      <div class="speaking-timeline" role="list">
+
+        <article class="timeline-item" role="listitem">
+          <div class="timeline-date">August 2026</div>
+          <div class="timeline-content">
+            <h3>Yale ComPASS Study</h3>
+            <p class="venue">"Using AI while protecting data sovereignty," a webinar for health professionals.</p>
+          </div>
+        </article>
+
+        <article class="timeline-item" role="listitem">
+          <div class="timeline-date">July 2026</div>
+          <div class="timeline-content">
+            <h3>Otipemisiwak M&eacute;tis Government</h3>
+            <p class="venue">M&eacute;tis Language Exchange: From Language Knowledge to Language Teaching, Edmonton. Four workshops on AI and language.</p>
+          </div>
+        </article>
+
+        <article class="timeline-item" role="listitem">
+          <div class="timeline-date">July 2026</div>
+          <div class="timeline-content">
+            <h3>Brave Heart Society / Native Organizers Alliance</h3>
+            <p class="venue">"AI, Data Centers, and Tribal Impacts," a presentation on AI history.</p>
+            <a href="https://www.youtube.com/watch?v=69LpmkDhLIE" target="_blank" rel="noopener noreferrer" class="recording-link">Watch the recording →</a>
+          </div>
+        </article>
+
+        <article class="timeline-item" role="listitem">
+          <div class="timeline-date">April 2026</div>
+          <div class="timeline-content">
+            <h3>University of Alberta, Indigenous Engaged Research Symposium</h3>
+            <p class="venue">Keynote.</p>
+          </div>
+        </article>
+
+        <article class="timeline-item" role="listitem">
+          <div class="timeline-date">March 2026</div>
+          <div class="timeline-content">
+            <h3>Collaboratory for Indigenous Data Governance / Indigenous Data Exchange</h3>
+            <p class="venue">"AI on Your Terms: Running Local Models for Data Sovereignty."</p>
+            <p class="co-presenter">With Dr. Lydia Jennings</p>
+          </div>
+        </article>
+
+        <article class="timeline-item" role="listitem">
+          <div class="timeline-date">March 2026</div>
+          <div class="timeline-content">
+            <h3>Northwest Indian Fisheries Commission Tribal Coding Group</h3>
+          </div>
+        </article>
+
+        <article class="timeline-item" role="listitem">
+          <div class="timeline-date">March 2026</div>
+          <div class="timeline-content">
+            <h3>NSF Center for Braiding Indigenous Knowledges and Science, UMass Amherst</h3>
+            <p class="co-presenter">With Jane Anderson (Local Contexts / NYU)</p>
+          </div>
+        </article>
+
+        <article class="timeline-item" role="listitem">
+          <div class="timeline-date">February 2026</div>
+          <div class="timeline-content">
+            <h3>Collaboratory for Indigenous Data Governance / Indigenous Data Exchange</h3>
+            <p class="venue">"It's Never Going To Be A Non-Issue: AI and Indigenous Interests."</p>
+            <p class="co-presenter">With Jane Anderson</p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section-alt" aria-labelledby="contact-heading">
+    <div class="container">
+      <p class="section-label">Contact</p>
+      <h2 id="contact-heading">Get in touch</h2>
+      <div class="divider" aria-hidden="true"></div>
+      <p class="about-prose" style="margin-top: 1.5rem;">
+        <a href="mailto:zam@zamdeshields.org">zam@zamdeshields.org</a>
+        &middot;
+        <a href="https://www.linkedin.com/in/zam-deshields/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        &middot;
+        <a href="https://linkedin.com/company/zam-deshields-llc" target="_blank" rel="noopener noreferrer">ZD LLC on LinkedIn</a>
+      </p>
+    </div>
+  </section>
 
   <!-- Footer -->
   <footer class="site-footer" role="contentinfo">
